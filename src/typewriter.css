@@ -1,0 +1,32 @@
+.typewriter {
+    display: inline-block;
+    width: 100%;
+}
+
+.typewriter-container {
+    display: inline;
+    white-space: pre-wrap;
+}
+
+.typewriter-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInWord 0.3s ease-out forwards;
+}
+
+.typewriter-space {
+    display: inline-block;
+    width: 0.25em;
+}
+
+@keyframes fadeInWord {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

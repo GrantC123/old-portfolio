@@ -5,130 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grant Crowder</title>
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-   
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/typewriter.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Funnel Display', sans-serif;
-            /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
-            background-image: url("Images/1440w-default.jpg");
-            background-size: cover;
-            background-position: center, top;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-            display: flex;
-    ;
-        }
-
-        .container {
-            background: #ffffff;
-            border-radius: 15px;
-            padding: 3rem;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            max-width: 600px;
-            width: 100%;
-            border: 1px solid #e6ecf9;
-
-        }
-
-        .logo {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        .subtitle {
-            color: #595e5f;
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            line-height: 1.5;
-        }
-
-        img {
-            height: 5.5rem;
-        }
-
-        .linkedin {
-            height: 24px;
-        }
-
-        .contact-info-container{
-            display: flex;
-            align-items: center; 
-            justify-content: center; 
-            gap: 1rem; 
-            color:#595e5f; 
-            width:100%;
-        }
-
-        .contact-divider {
-            width:1px; 
-            height: 24px; 
-            background-color:#D4DCEA;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
 
-       
-
-
-
-       /* Media Queries */
-@media (max-width: 600px) {
-
-/* Navigation Mobile Styles */
-.container {
-            padding: 3rem 1rem;
-        }
-
-h1 {
-            font-size: 2rem;
-        }
-
-img {
-            height: 3.5rem;
-        }
-.email {
-    font-size: .9rem;
-}
-
-}
-    </style>
 </head>
-<body>
-    <div class="container">
-        <img src="Images/gc-mark.png">
-        <h1 style="padding-top: 1.5rem;color:#333;">Coming Soon</h1>
-        <p class="subtitle">
-            My portfolio is currently under construction. I'm working hard to create something amazing. 
-            Stay tuned. 
-        </p>
-        <div class="contact-info-container">
-        <p class="email"><span class="email-address">grantcrowderdesign<wbr>@gmail.com</span></p>
-        <div class="contact-divider"></div>
-        <a style="display:flex;" href="https://www.linkedin.com/in/grantcrowder/"><img class="linkedin" src="Images/linkedin.svg"></a>
-
+<body class="bg-white font-sans antialiased text-gray-900">
+    <header>
+       <navigation-menu></navigation-menu>
+    </header>
+    <section class="py-16 md:py-24 bg-gradient-to-b bg-purple-900">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 space-y-6">
+            <div class="typewriter font-inter text-5xl md:text-6xl font-bold leading-none text-white">
+                <span class="text-purple-300">I'm Grant</span> — Senior Product Designer and Creative Leader driving results through strategic design and team empowerment.
+            </div>
+            <a href="#project-section" class="inline-flex items-center px-6 py-3 bg-purple-600 !text-purple-50 font-medium rounded-lg transition-transform duration-300 transform hover:scale-105">
+                See my work
+                <span class="material-icons ml-2 text-xl">arrow_downward</span>
+            </a>
         </div>
-    </div>
+      </div>
+    </section>
+    <div id="project-section"></div>
 
+   <!-- Project Showcase Section -->
+    <section class="py-20 px-6 bg-gray-100" >
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-inter font-bold text-center mb-4">
+                Top case studies
+            </h2>
+            <p class="text-xl text-gray-700 text-center mb-12 font-normal">Here are some of my most recent projects.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="bankrate-data-center.html">
+                    <project-tile
+                        image="Images/bankrate-data-center-hero.jpg"
+                        year="2024"
+                        title="Bankrate Data Center"
+                        description="Description of Project 1. This is a sample project to demonstrate the responsive layout."
+                        label="Product Design">
+                    </project-tile>
+                </a>
 
-    </script>
+                <a href="bankrate-review-template.html">
+                    <project-tile
+                        image="Images/Bankrate-Review-Template.jpg"
+                        year="2025"
+                        title="Bankrate Review Template"
+                        description="Description of Project 2. Another example to show how multiple projects appear in the grid."
+                        label="Product Design">
+                    </project-tile>
+                </a>
+
+                <a href="#" ">
+                    <project-tile
+                        image="Images/design-system-test.jpg"
+                        year="2022"
+                        title="Amex Design System"
+                        description="Description of Project 3. This project has a longer description to demonstrate how the layout handles varying content lengths."
+                        label="Design Systems">
+                    </project-tile>
+                </a>
+
+                <a href="#" >
+                    <project-tile
+                        image="Images/ACD.jpg"
+                        year="2024"
+                        title="Allconnect Homepage Redesign"
+                        description="A complete redesign of the Allconnect homepage, to improve the user experience and increase engagement."
+                        label="Web Design">
+                    </project-tile>
+                </a>
+
+                <a href="#" >
+                    <project-tile
+                        image="Images/NextAdvisor.jpg"
+                        year="2021,2025"
+                        title="Editorial imagery"
+                        description="Description of Project 3. This project has a longer description to demonstrate how the layout handles varying content lengths."
+                        label="Visual Design">
+                    </project-tile>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-purple-50">
+        <my-footer></my-footer>
+    </footer>
+    <script src="src/typewriter.js"></script>
+    <script src="script.js"></script>
+    <script src="wc-footer.js"></script>
+    <script src="wc-nav-component.js"></script>
+    <script src="wc-project-tile.js"></script>
 </body>
 </html>
