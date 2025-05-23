@@ -22,7 +22,7 @@ class ProjectTile extends HTMLElement {
                         <span class="text-sm text-gray-600">${this.getAttribute('year')}</span>
                         <h3 class="mt-2 mb-2 text-xl sm:text-2xl font-bold">${this.getAttribute('title')}</h3>
                         <p class="text-sm sm:text-base text-gray-700 mb-4">${this.getAttribute('description')}</p>
-                        <span class="inline-block bg-white px-3 py-1 rounded text-sm mb-4 border border-gray-200">${this.getAttribute('label')}</span>
+                        <span class="inline-block bg-white px-3 py-1 rounded-sm text-sm mb-4 border border-gray-200">${this.getAttribute('label')}</span>
                     </div>
                 </div>
             </div>

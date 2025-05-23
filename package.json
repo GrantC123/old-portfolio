@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/GrantC123/old-portfolio#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.17",
+    "@tailwindcss/postcss": "^4.1.7",
     "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^4.1.7"
   }
 }

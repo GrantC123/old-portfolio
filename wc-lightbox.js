@@ -60,7 +60,7 @@ class ImageLightbox extends HTMLElement {        // Define the ImageLightbox cla
 
                 <!-- Modal -->
                 <div class="modal hidden fixed inset-0 bg-black bg-opacity-60 backdrop-blur-lg z-50 flex items-center justify-center p-4">
-                    <button class="close-btn absolute top-4 right-4 text-white hover:text-gray-300 focus:outline-none">
+                    <button class="close-btn absolute top-4 right-4 text-white hover:text-gray-300 focus:outline-hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>

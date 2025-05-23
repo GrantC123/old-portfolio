@@ -10,7 +10,7 @@ class NavigationMenu extends HTMLElement {
 
     render() {
         this.innerHTML = `
-            <nav class="bg-white text-gray-900 flex justify-between items-center px-8 py-4 z-50 h-16 shadow-sm">
+            <nav class="bg-white text-gray-900 flex justify-between items-center px-8 py-4 z-50 h-16 shadow-xs">
                 <div class="max-w-7xl flex justify-between grow mx-auto">
                 <div class="flex items-center">
                     <a href="index.html">
@@ -30,7 +30,7 @@ class NavigationMenu extends HTMLElement {
                     <li><a href="PDF/Grant Crowder - Resume.pdf" class="text-gray-900 no-underline hover:text-purple-600 transition-colors block">Resume</a></li>
                     <li><a href="https://www.linkedin.com/in/grantcrowder/" class="text-gray-900 hover:text-purple-600 transition-colors block"><img src="Images/linkedin.svg" alt="LinkedIn" class="h-5 w-5"></a></li>
                 </ul>
-                <button class="hamburger block md:hidden focus:outline-none" aria-label="Menu">
+                <button class="hamburger block md:hidden focus:outline-hidden" aria-label="Menu">
                     <span class="block w-6 h-0.5 bg-gray-900 mb-1.5 transition-all"></span>
                     <span class="block w-6 h-0.5 bg-gray-900 mb-1.5 transition-all"></span>
                     <span class="block w-6 h-0.5 bg-gray-900 transition-all"></span>
