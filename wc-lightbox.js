@@ -1,52 +1,52 @@
-class ImageLightbox extends HTMLElement {
-    constructor() {
-        super();
+class ImageLightbox extends HTMLElement {        // Define the ImageLightbox class      
+    constructor() {   // Define the constructor for the ImageLightbox class
+        super();   // Call the constructor of the HTMLElement class
     }
 
-    connectedCallback() {
-        this.render();
-        this.setupEventListeners();
+    connectedCallback() {                   // This is the function that is called when the element is connected to the DOM
+        this.render();                     // Render the image lightbox this is the html and css for the image lightbox         
+        this.setupEventListeners();         // Setup event listeners for the image, modal, and close button
     }
 
-    setupEventListeners() {
-        const img = this.querySelector('.lightbox-trigger');
-        const modal = this.querySelector('.modal');
-        const closeBtn = this.querySelector('.close-btn');
+    setupEventListeners() {     // Setup event listeners for the image, modal, and close button
+        const img = this.querySelector('.lightbox-trigger'); // Get the image element
+        const modal = this.querySelector('.modal'); // Get the modal element
+        const closeBtn = this.querySelector('.close-btn'); // Get the close button element
 
-        img.addEventListener('click', () => {
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+        img.addEventListener('click', () => {    // Add event listener to the image
+            modal.classList.remove('hidden'); // Remove the hidden class from the modal
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
         });
 
-        closeBtn.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            document.body.style.overflow = '';
+        closeBtn.addEventListener('click', () => {    // Add event listener to the close button element     
+            modal.classList.add('hidden'); // Add the hidden class to the modal
+            document.body.style.overflow = ''; // Allow scrolling when modal is closed
         });
 
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
+        modal.addEventListener('click', (e) => {    // Add event listener to the modal
+            if (e.target === modal) {   // If the target of the click is the modal
+                modal.classList.add('hidden'); // Add the hidden class to the modal
+                document.body.style.overflow = ''; // Allow scrolling when modal is closed
             }
         });
 
         // Add keyboard support for closing modal
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
+        document.addEventListener('keydown', (e) => {        // Add event listener to the document
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) { // If the key pressed is Escape and the modal is not hidden
+                modal.classList.add('hidden'); // Add the hidden class to the modal
+                document.body.style.overflow = ''; // Allow scrolling when modal is closed
             }
         });
     }
 
-    render() {
-        const imageUrl = this.getAttribute('image') || '';
-        const altText = this.getAttribute('alt') || '';
-        const caption = this.getAttribute('caption');
-        const width = this.getAttribute('width') || 'auto';
-        const height = this.getAttribute('height') || 'auto';
+    render() {   // Render the image lightbox this is the html and css for the image lightbox       
+        const imageUrl = this.getAttribute('image') || ''; // Get the image url
+        const altText = this.getAttribute('alt') || ''; // Get the alt text
+        const caption = this.getAttribute('caption'); // Get the caption
+        const width = this.getAttribute('width') || 'auto'; // Get the width
+        const height = this.getAttribute('height') || 'auto'; // Get the height     
 
-        this.innerHTML = `
+        this.innerHTML = `   
             <div class="lightbox-container">
                 <img 
                     src="${imageUrl}" 
