@@ -10,7 +10,7 @@ class NavigationMenu extends HTMLElement {
 
     render() {
         this.innerHTML = `
-            <nav class="bg-white text-gray-900 flex justify-between items-center px-8 py-4 z-50 h-16 shadow-xs">
+            <nav class="bg-white text-gray-900 flex justify-between items-center px-8 py-4 z-50 h-16 shadow-xs relative">
                 <div class="max-w-7xl flex justify-between grow mx-auto">
                 <div class="flex items-center">
                     <a href="index.html">
@@ -24,13 +24,13 @@ class NavigationMenu extends HTMLElement {
                     <li><a href="https://www.linkedin.com/in/grantcrowder/" class="text-gray-900 hover:text-purple-600 transition-colors"><img src="Images/linkedin.svg" alt="LinkedIn" class="h-5 w-5"></a></li>
                 </ul>
                 <!-- Mobile Menu -->
-                <ul class="mobile-menu absolute left-0 right-0 top-16 bg-white py-4 px-8 space-y-4 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-lg">
+                <ul class="mobile-menu hidden fixed left-0 right-0 top-16 bg-white py-4 px-8 space-y-4 transition-all duration-300 ease-in-out md:hidden shadow-lg z-30">
                     <li><a href="index.html#project-section" class="text-gray-900 no-underline hover:text-purple-600 transition-colors block">Work</a></li>
                     <li><a href="about.html" class="text-gray-900 no-underline hover:text-purple-600 transition-colors block">About</a></li>
                     <li><a href="PDF/Grant Crowder - Resume.pdf" class="text-gray-900 no-underline hover:text-purple-600 transition-colors block">Resume</a></li>
                     <li><a href="https://www.linkedin.com/in/grantcrowder/" class="text-gray-900 hover:text-purple-600 transition-colors block"><img src="Images/linkedin.svg" alt="LinkedIn" class="h-5 w-5"></a></li>
                 </ul>
-                <button class="hamburger block md:hidden focus:outline-hidden" aria-label="Menu">
+                <button class="hamburger block md:hidden focus:outline-none z-50 relative" aria-label="Menu">
                     <span class="block w-6 h-0.5 bg-gray-900 mb-1.5 transition-all"></span>
                     <span class="block w-6 h-0.5 bg-gray-900 mb-1.5 transition-all"></span>
                     <span class="block w-6 h-0.5 bg-gray-900 transition-all"></span>
@@ -63,39 +63,60 @@ class NavigationMenu extends HTMLElement {
         const hamburger = this.querySelector(".hamburger");
         const mobileMenu = this.querySelector(".mobile-menu");
         
-        if (hamburger) {
-            hamburger.addEventListener("click", () => {
+        console.log("Setting up navigation listeners", { hamburger, mobileMenu }); // Debug log
+        
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener("click", (e) => {
+                e.preventDefault();
+                console.log("Hamburger clicked!"); // Debug log
+                
                 hamburger.classList.toggle("active");
+                
                 if (hamburger.classList.contains("active")) {
-                    mobileMenu.style.transform = "translateX(0)";
+                    // Show menu
+                    mobileMenu.classList.remove("hidden");
+                    console.log("Showing menu"); // Debug log
+                    
                     // Animate hamburger to X
                     const bars = hamburger.querySelectorAll("span");
-                    bars[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+                    bars[0].style.transform = "rotate(45deg) translate(9px, 5px)";
                     bars[1].style.opacity = "0";
-                    bars[2].style.transform = "rotate(-45deg) translate(5px, -5px)";
+                    bars[2].style.transform = "rotate(-45deg) translate(9px, -5px)";
                 } else {
-                    mobileMenu.style.transform = "translateX(100%)";
+                    // Hide menu
+                    mobileMenu.classList.add("hidden");
+                    console.log("Hiding menu"); // Debug log
+                    
+                    // Reset hamburger
+                    const bars = hamburger.querySelectorAll("span");
+                    bars[0].style.transform = "none";
+                    bars[1].style.opacity = "1";
+                    bars[2].style.transform = "none";
+                    hamburger.classList.remove("active");
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+        } else {
+            console.error("Navigation elements not found", { hamburger, mobileMenu });
+        }
+        
+        // Close menu when clicking links
+        const navLinks = this.querySelectorAll(".mobile-menu a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                const hamburger = this.querySelector(".hamburger");
+                const mobileMenu = this.querySelector(".mobile-menu");
+                
+                if (hamburger && mobileMenu) {
+                    hamburger.classList.remove("active");
+                    mobileMenu.classList.add("hidden");
+                    
                     // Reset hamburger
                     const bars = hamburger.querySelectorAll("span");
                     bars[0].style.transform = "none";
                     bars[1].style.opacity = "1";
                     bars[2].style.transform = "none";
                 }
-            });
-        }
-        
-        const navLinks = this.querySelectorAll(".mobile-menu a");
-        navLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                const hamburger = this.querySelector(".hamburger");
-                const mobileMenu = this.querySelector(".mobile-menu");
-                hamburger?.classList.remove("active");
-                mobileMenu.style.transform = "translateX(100%)";
-                // Reset hamburger
-                const bars = hamburger.querySelectorAll("span");
-                bars[0].style.transform = "none";
-                bars[1].style.opacity = "1";
-                bars[2].style.transform = "none";
             });
         });
     }
