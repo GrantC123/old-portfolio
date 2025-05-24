@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
-    "build-once": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css"
+    "build-once": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css",
+    "serve": "http-server . -p 3000 -c-1",
+    "dev": "npm run build & npm run serve"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.7",
     "@tailwindcss/postcss": "^4.1.7",
+    "http-server": "^14.1.1",
     "postcss": "^8.4.35",
     "tailwindcss": "^4.1.7"
   }
