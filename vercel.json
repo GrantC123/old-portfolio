@@ -4,5 +4,12 @@
   "framework": null,
   "installCommand": "npm install",
   "public": true,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/come-soon.html",
+      "permanent": false
+    }
+  ]
 } 
