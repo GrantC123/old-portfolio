@@ -5,130 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grant Crowder</title>
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-   
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Funnel Display', sans-serif;
-            /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
-            background-image: url("Images/1440w-default.jpg");
-            background-size: cover;
-            background-position: center, top;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-            display: flex;
-    ;
-        }
-
-        .container {
-            background: #ffffff;
-            border-radius: 15px;
-            padding: 3rem;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            max-width: 600px;
-            width: 100%;
-            border: 1px solid #e6ecf9;
-
-        }
-
-        .logo {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        .subtitle {
-            color: #595e5f;
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            line-height: 1.5;
-        }
-
-        img {
-            height: 5.5rem;
-        }
-
-        .linkedin {
-            height: 24px;
-        }
-
-        .contact-info-container{
-            display: flex;
-            align-items: center; 
-            justify-content: center; 
-            gap: 1rem; 
-            color:#595e5f; 
-            width:100%;
-        }
-
-        .contact-divider {
-            width:1px; 
-            height: 24px; 
-            background-color:#D4DCEA;
-        }
-
-
-       
-
-
-
-       /* Media Queries */
-@media (max-width: 600px) {
-
-/* Navigation Mobile Styles */
-.container {
-            padding: 3rem 1rem;
-        }
-
-h1 {
-            font-size: 2rem;
-        }
-
-img {
-            height: 3.5rem;
-        }
-.email {
-    font-size: .9rem;
-}
-
-}
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <img src="Images/gc-mark.png">
-        <h1 style="padding-top: 1.5rem;color:#333;">Coming Soon</h1>
-        <p class="subtitle">
+<body class="min-h-screen flex items-center justify-center p-5 font-['Funnel_Display'] bg-cover bg-center" style="background-image: url('Images/1440w-default.jpg');">
+    <div class="bg-white rounded-[15px] p-12 shadow-[0_15px_35px_rgba(0,0,0,0.1)] max-w-[600px] w-full border border-[#e6ecf9] sm:p-8">
+        <img src="Images/gc-mark.png" class="h-[88px] sm:h-[56px] mx-auto">
+        <h1 class="text-[2.5rem] sm:text-[2rem] font-semibold text-[#2c3e50] pt-6 mb-4">Coming Soon</h1>
+        <p class="text-[#595e5f] text-base mb-8 leading-relaxed">
             My portfolio is currently under construction. I'm working hard to create something amazing. 
             Stay tuned. 
         </p>
-        <div class="contact-info-container">
-        <p class="email"><span class="email-address">grantcrowderdesign<wbr>@gmail.com</span></p>
-        <div class="contact-divider"></div>
-        <a style="display:flex;" href="https://www.linkedin.com/in/grantcrowder/"><img class="linkedin" src="Images/linkedin.svg"></a>
-
+        <div class="flex items-center justify-center gap-4">
+            <p class="text-[#595e5f] sm:text-[0.9rem]">grantcrowderdesign<wbr>@gmail.com</p>
+            <div class="w-px h-6 bg-[#D4DCEA]"></div>
+            <a href="https://www.linkedin.com/in/grantcrowder/" class="flex">
+                <img class="h-6" src="Images/linkedin.svg" alt="LinkedIn">
+            </a>
         </div>
     </div>
 
-
-    </script>
 </body>
 </html>
