@@ -26,7 +26,7 @@ class HorizontalScroll extends HTMLElement {
           overflow-x: auto;
           overflow-y: visible;
           /* Increased padding to accommodate card shadows and hover effects */
-          padding: 40px 0 60px 0;
+          padding: 40px 30px 60px 30px;
           scrollbar-width: thin;
           scrollbar-color: #d1d5db #f9fafb;
         }
@@ -127,7 +127,7 @@ class HorizontalScroll extends HTMLElement {
           
           #scroll-track {
             gap: 16px;
-            padding: 30px 0 50px 0;
+            padding: 30px 20px 50px 20px;
           }
           
           #scroll-track ::slotted(*) {
@@ -142,7 +142,7 @@ class HorizontalScroll extends HTMLElement {
           }
           
           #scroll-track {
-            padding: 20px 0 40px 0;
+            padding: 20px 16px 40px 16px;
           }
           
           #scroll-track ::slotted(*) {
@@ -189,14 +189,22 @@ class HorizontalScroll extends HTMLElement {
     // Update button states on scroll
     this.scrollTrack.addEventListener('scroll', () => this.updateButtons());
     
-    // Initial button state
-    setTimeout(() => this.updateButtons(), 100);
+    // Initial button state and height matching
+    setTimeout(() => {
+      this.updateButtons();
+      this.matchCardHeights();
+      // Set up mutation observer after initial setup
+      this.setupContentObserver();
+    }, 100);
     
     // Add touch/wheel support
     this.addInteractionSupport();
     
     // Update on resize
-    window.addEventListener('resize', () => this.updateButtons());
+    window.addEventListener('resize', () => {
+      this.updateButtons();
+      this.matchCardHeights();
+    });
   }
   
   scrollLeft() {
@@ -285,6 +293,74 @@ class HorizontalScroll extends HTMLElement {
     this.scrollTrack.addEventListener('touchend', () => {
       isDragging = false;
     });
+  }
+  
+  matchCardHeights() {
+    // Get all slotted elements (cards)
+    const cards = this.querySelectorAll(':scope > *');
+    
+    if (cards.length === 0) return;
+    
+    // Reset heights to auto to get natural heights
+    cards.forEach(card => {
+      card.style.height = 'auto';
+    });
+    
+    // Wait for layout to settle, then calculate max height
+    setTimeout(() => {
+      let maxHeight = 0;
+      
+      // Find the tallest card
+      cards.forEach(card => {
+        const cardHeight = card.offsetHeight;
+        if (cardHeight > maxHeight) {
+          maxHeight = cardHeight;
+        }
+      });
+      
+      // Apply the max height to all cards
+      if (maxHeight > 0) {
+        cards.forEach(card => {
+          card.style.height = `${maxHeight}px`;
+        });
+      }
+    }, 50);
+  }
+  
+  // Public method to manually recalculate heights
+  recalculateHeights() {
+    this.matchCardHeights();
+  }
+  
+  // Set up mutation observer to watch for content changes
+  setupContentObserver() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+    
+    this.observer = new MutationObserver(() => {
+      // Debounce the height recalculation
+      clearTimeout(this.heightRecalcTimeout);
+      this.heightRecalcTimeout = setTimeout(() => {
+        this.matchCardHeights();
+      }, 100);
+    });
+    
+    // Observe changes to child elements and their content
+    this.observer.observe(this, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+  }
+  
+  disconnectedCallback() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+    if (this.heightRecalcTimeout) {
+      clearTimeout(this.heightRecalcTimeout);
+    }
   }
 }
 
