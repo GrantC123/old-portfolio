@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll Demo - Grant Crowder Design</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+</head>
+<body class="bg-gray-50 font-inter">
+    <header>
+        <nav-component></nav-component>
+    </header>
+
+    <main class="container mx-auto px-8 py-20">
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
+                🚀 Component Demo
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 font-funnel mb-6">
+                Horizontal Scroll Component
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                A smooth horizontal scrolling component with optional navigation arrows and touch support
+            </p>
+        </div>
+
+        <!-- Demo 1: With Arrows -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-gray-900 font-funnel mb-8 text-center">
+                With Navigation Arrows
+            </h2>
+            
+            <horizontal-scroll show-arrows="true">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <span class="text-white text-2xl">🎨</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 font-funnel">Creative Design</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-center mb-6">
+                        Innovative and creative design solutions that capture attention and communicate your brand message effectively.
+                    </p>
+                    <div class="flex justify-center">
+                        <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <span class="text-white text-2xl">⚡</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 font-funnel">Fast Performance</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-center mb-6">
+                        Optimized for speed and performance, ensuring your users have the best possible experience across all devices.
+                    </p>
+                    <div class="flex justify-center">
+                        <div class="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <span class="text-white text-2xl">📱</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 font-funnel">Mobile First</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-center mb-6">
+                        Designed with mobile users in mind, providing seamless experiences across smartphones, tablets, and desktops.
+                    </p>
+                    <div class="flex justify-center">
+                        <div class="w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <span class="text-white text-2xl">🔒</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 font-funnel">Secure & Reliable</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-center mb-6">
+                        Built with security best practices and reliable infrastructure to protect your data and ensure uptime.
+                    </p>
+                    <div class="flex justify-center">
+                        <div class="w-12 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <span class="text-white text-2xl">📊</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 font-funnel">Data Driven</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-center mb-6">
+                        Every decision is backed by data and analytics to ensure we're building solutions that truly work for your users.
+                    </p>
+                    <div class="flex justify-center">
+                        <div class="w-12 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
+                    </div>
+                </div>
+            </horizontal-scroll>
+        </section>
+
+        <!-- Demo 2: Without Arrows -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-gray-900 font-funnel mb-8 text-center">
+                Without Navigation Arrows
+            </h2>
+            
+            <horizontal-scroll show-arrows="false">
+                <!-- Project Cards -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 border border-blue-200">
+                    <div class="mb-6">
+                        <div class="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-white text-xl">🌐</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-funnel">Web Development</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Modern, responsive websites built with the latest technologies and best practices.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm">Next.js</span>
+                        <span class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm">Tailwind</span>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 border border-green-200">
+                    <div class="mb-6">
+                        <div class="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-white text-xl">📱</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-funnel">Mobile Apps</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Native and cross-platform mobile applications for iOS and Android devices.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm">React Native</span>
+                        <span class="px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm">Flutter</span>
+                        <span class="px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm">Swift</span>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-3xl p-8 border border-purple-200">
+                    <div class="mb-6">
+                        <div class="w-12 h-12 bg-purple-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-white text-xl">🎨</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-funnel">UI/UX Design</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        User-centered design solutions that prioritize usability and aesthetic appeal.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm">Figma</span>
+                        <span class="px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm">Adobe XD</span>
+                        <span class="px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm">Sketch</span>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-50 to-red-100 rounded-3xl p-8 border border-orange-200">
+                    <div class="mb-6">
+                        <div class="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center mb-4">
+                            <span class="text-white text-xl">⚡</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-funnel">Performance</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Optimization and performance tuning to ensure fast, efficient applications.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-200 text-orange-800 rounded-full text-sm">Lighthouse</span>
+                        <span class="px-3 py-1 bg-orange-200 text-orange-800 rounded-full text-sm">WebVitals</span>
+                        <span class="px-3 py-1 bg-orange-200 text-orange-800 rounded-full text-sm">CDN</span>
+                    </div>
+                </div>
+            </horizontal-scroll>
+        </section>
+
+        <!-- Usage Instructions -->
+        <section class="bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-900 font-funnel mb-8 text-center">
+                How to Use
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">With Navigation Arrows</h3>
+                    <div class="bg-gray-50 rounded-xl p-4 font-mono text-sm">
+                        <code>
+&lt;horizontal-scroll show-arrows="true"&gt;<br>
+&nbsp;&nbsp;&lt;div&gt;Card 1&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;div&gt;Card 2&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;div&gt;Card 3&lt;/div&gt;<br>
+&lt;/horizontal-scroll&gt;
+                        </code>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Without Navigation Arrows</h3>
+                    <div class="bg-gray-50 rounded-xl p-4 font-mono text-sm">
+                        <code>
+&lt;horizontal-scroll show-arrows="false"&gt;<br>
+&nbsp;&nbsp;&lt;div&gt;Card 1&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;div&gt;Card 2&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;div&gt;Card 3&lt;/div&gt;<br>
+&lt;/horizontal-scroll&gt;
+                        </code>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-200">
+                <h4 class="font-bold text-blue-900 mb-2">Features:</h4>
+                <ul class="text-blue-800 space-y-1">
+                    <li>• Smooth horizontal scrolling with native scroll behavior</li>
+                    <li>• Optional navigation arrows that auto-hide on mobile</li>
+                    <li>• Touch/swipe support for mobile devices</li>
+                    <li>• Mouse wheel and trackpad support (horizontal scroll or Shift+wheel)</li>
+                    <li>• Responsive design with automatic card sizing</li>
+                    <li>• Custom scrollbar styling</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <my-footer></my-footer>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="wc-nav-component.js"></script>
+    <script src="wc-footer.js"></script>
+    <script src="wc-horizontal-scroll.js"></script>
+</body>
+</html> 
