@@ -7,7 +7,7 @@ class HorizontalScroll extends HTMLElement {
         :host {
           display: block;
           width: 100%;
-          max-width: 1200px;
+          max-width: 1280px;
           margin: 0 auto;
           /* Add padding to accommodate shadows and hover effects */
           padding: 20px 0;
