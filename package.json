@@ -5,11 +5,10 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
-    "build:prod": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify",
-    "build-once": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css",
-    "serve": "http-server . -p 3000 -c-1",
-    "dev": "npm run build & npm run serve"
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "serve": "npx http-server . -p 3000 -c-1",
+    "dev": "npm run watch:css & npm run serve"
   },
   "repository": {
     "type": "git",
@@ -23,11 +22,7 @@
   },
   "homepage": "https://github.com/GrantC123/old-portfolio#readme",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.7",
-    "@tailwindcss/postcss": "^4.1.7",
-    "http-server": "^14.1.1",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.7"
+    "http-server": "^14.1.1"
   },
   "dependencies": {
     "ansi-styles": "^4.3.0",
@@ -69,6 +64,7 @@
     "is-number": "^7.0.0",
     "jiti": "^2.4.2",
     "lightningcss": "^1.30.1",
+    "lightningcss-darwin-arm64": "^1.30.1",
     "magic-string": "^0.30.17",
     "math-intrinsics": "^1.1.0",
     "micromatch": "^4.0.8",
@@ -97,6 +93,7 @@
     "side-channel-weakmap": "^1.0.2",
     "source-map-js": "^1.2.1",
     "supports-color": "^7.2.0",
+    "tailwindcss": "^3.4.17",
     "tapable": "^2.2.2",
     "tar": "^7.4.3",
     "to-regex-range": "^5.0.1",
