@@ -96,6 +96,101 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6 bg-purple-900">
+        <!-- Section Title -->
+        <h2 class="text-4xl font-inter font-bold text-center mb-4 text-white">
+            What others are saying
+        </h2>
+
+        <!-- Horizontal Scroll Container - This wraps all testimonials and enables horizontal scrolling -->
+        <horizontal-scroll>
+            <!-- Testimonial Card 1 - Individual testimonial container -->
+            <div class="bg-white rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col h-full">
+                <!-- Quote Content Area - This grows to fill available space, pushing attribution to bottom -->
+                <div class="flex-grow">
+                    <!-- Testimonial Quote Text -->
+                    <p class="text-gray-600 leading-relaxed">
+                        "Grant has an excellent eye for detail. He always thinks about the best experience for the user on our websites. On a recent project, he took the initiative and covered all the details with stakeholders from other functional groups to guarantee everyone would be on the same page from a UX/UI experience. We are lucky to have a person like Grant on the team who constantly pushes our designs to a better level."
+                    </p>
+                </div>
+                <!-- Attribution Section - Always appears at bottom of card -->
+                <div class="mt-6 pt-6 border-t border-gray-100">
+                    <!-- Attribution Layout Container - Centers avatar and text vertically -->
+                    <div class="flex flex-col">
+                        <!-- Avatar Image - Profile picture instead of emoji -->
+                        <div class="w-12 h-12 rounded-full overflow-hidden mb-3">
+                            <img src="Images/placeholder-avatar.png" alt="Team Colleague" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Person Info Container -->
+                        <div>
+                            <!-- Person's Name -->
+                            <h4 class="font-semibold text-gray-900">Team Colleague</h4>
+                            <!-- Person's Role/Team -->
+                            <p class="text-sm text-gray-500">Product Team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Card 2 - Same structure as Card 1 -->
+            <div class="bg-white rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col h-full">
+                <!-- Quote Content Area -->
+                <div class="flex-grow">
+                    <!-- Testimonial Quote Text -->
+                    <p class="text-gray-600 leading-relaxed">
+                        "Grant has always shown a willingness and eagerness to complete tasks on time for our site and improve our process. Recently, Grant provided our team with a template for creative tickets after we had a series of tickets with unclear acceptance criteria come through. This has helped our status. Done so smooth that we are no longer needing to have such a heavy back and forth on the asks of the creative team."
+                    </p>
+                </div>
+                <!-- Attribution Section -->
+                <div class="mt-6 pt-6 border-t border-gray-100">
+                    <!-- Attribution Layout Container -->
+                    <div class="flex flex-col">
+                        <!-- Avatar Image - Profile picture instead of emoji -->
+                        <div class="w-12 h-12 rounded-full overflow-hidden mb-3">
+                            <img src="Images/placeholder-avatar.png" alt="Development Partner" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Person Info Container -->
+                        <div>
+                            <!-- Person's Name -->
+                            <h4 class="font-semibold text-gray-900">Development Partner</h4>
+                            <!-- Person's Role/Team -->
+                            <p class="text-sm text-gray-500">Engineering Team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Card 3 - Same structure as Cards 1 & 2 -->
+            <div class="bg-white rounded-xl p-8 shadow-xl border border-gray-100 flex flex-col h-full">
+                <!-- Quote Content Area -->
+                <div class="flex-grow">
+                    <!-- Testimonial Quote Text -->
+                    <p class="text-gray-600 leading-relaxed">
+                        "Grant has a strong work ethic and a keen eye for detail, which allows them to produce high-quality work in a both efficient and collaborative manner. His design solutions consistently exceed expectations and drive meaningful results for our projects."
+                    </p>
+                </div>
+                <!-- Attribution Section -->
+                <div class="mt-6 pt-6 border-t border-gray-100">
+                    <!-- Attribution Layout Container -->
+                    <div class="flex flex-col">
+                        <!-- Avatar Image - Profile picture instead of emoji -->
+                        <div class="w-12 h-12 rounded-full overflow-hidden mb-3">
+                            <img src="Images/placeholder-avatar.png" alt="Project Manager" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Person Info Container -->
+                        <div>
+                            <!-- Person's Name -->
+                            <h4 class="font-semibold text-gray-900">Project Manager</h4>
+                            <!-- Person's Role/Team -->
+                            <p class="text-sm text-gray-500">Leadership Team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </horizontal-scroll>
+    </section>
+
     <footer class="bg-purple-50">
         <my-footer></my-footer>
     </footer>
@@ -104,5 +199,6 @@
     <script src="wc-footer.js"></script>
     <script src="wc-nav-component.js"></script>
     <script src="wc-project-tile.js"></script>
+    <script src="wc-horizontal-scroll.js"></script>
 </body>
 </html>
