@@ -4,9 +4,6 @@ class HorizontalScroll extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = `
       <style>
-        /* Import Tailwind CSS */
-        @import url('/dist/output.css');
-        
         :host {
           display: block;
           width: 100%;
