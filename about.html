@@ -3,99 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About Me - Grant Crowder</title>
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white">
+<body class="bg-gradient-to-br from-slate-50 via-white to-purple-50 font-inter">
     <header>
         <navigation-menu></navigation-menu>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <!-- About Section -->
-        <div class="flex flex-col md:flex-row gap-12 items-center mb-24">
-            <div class="w-full md:w-1/2 space-y-6">
-                <h1 class="text-5xl font-bold text-gray-900 font-funnel">Get to Know Me</h1>
-                <p class="text-lg text-gray-600 leading-relaxed">
-                    I'm a designer living in Columbia South Carolina. I have over 10 years of experience in the design industry. 
-                    I started out as a graphic designer, but realized that I loved web design. I love seeing people use my designs, 
-                    versus looking at them. I am currently employed by Red Ventures working as a Senior Product Designer, but work 
-                    on freelance projects on the side. If you have a project you would like to start, and like my work, send me a 
-                    message! I would love to help you with your design needs.
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-r from-purple-900 via-purple-800 to-indigo-900">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h1 class="text-6xl md:text-7xl font-bold text-white font-funnel mb-6 tracking-tight">
+                    Get to Know Me
+                </h1>
+                <p class="text-xl md:text-2xl text-purple-100 max-w-3xl mx-auto leading-relaxed">
+                    A passionate designer crafting digital experiences that matter
                 </p>
-            
-            </div>
-            <div class="w-full md:w-1/2">
-                <img src="Images/family.jpg" 
-                     class="w-full h-auto rounded-lg shadow-lg" 
-                     alt="Grant Crowder">
+                <div class="mt-8 flex justify-center">
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                </div>
             </div>
         </div>
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- About Section -->
+        <section class="py-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Content -->
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                            👋 About Me
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 font-funnel leading-tight">
+                            Designing with Purpose & Passion
+                        </h2>
+                        <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
+                    </div>
+                    
+                    <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+                        <p>
+                            I'm a designer living in <span class="font-semibold text-gray-800">Columbia, South Carolina</span> with over 
+                            <span class="font-semibold text-purple-600">10 years of experience</span> in the design industry.
+                        </p>
+                        <p>
+                            I started out as a graphic designer, but realized that I loved web design. I love seeing people 
+                            <span class="italic">use</span> my designs, versus just looking at them. There's something magical 
+                            about creating experiences that people interact with every day.
+                        </p>
+                        <p>
+                            I am currently employed by <span class="font-semibold text-gray-800">Red Ventures</span> working as a 
+                            <span class="font-semibold text-purple-600">Senior Product Designer</span>, but work on freelance 
+                            projects on the side.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-2xl border border-purple-100">
+                        <p class="text-gray-700 font-medium">
+                            💡 Have a project in mind? I'd love to help bring your vision to life!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="relative">
+                    <div class="relative z-10">
+                        <img src="Images/family.jpg" 
+                             class="w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-300" 
+                             alt="Grant Crowder with family">
+                    </div>
+                    <!-- Decorative background -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl blur-2xl opacity-20 -z-10"></div>
+                </div>
+            </div>
+        </section>
 
         <!-- Skills & Tools Section -->
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Skills Column -->
-            <div class="space-y-6">
-                <h2 class="text-3xl font-bold text-gray-900 font-funnel">Skills</h2>
-                <ul class="space-y-3">
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">User Research</span>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">Wireframing</span>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">Prototyping</span>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">User Testing</span>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">UI Design</span>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">Interaction Design</span>
-                    </li>
-                </ul>
+        <section class="py-20">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium mb-6">
+                    🛠️ My Toolkit
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 font-funnel mb-6">
+                    Skills & Tools
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    The technologies and methodologies I use to create exceptional digital experiences
+                </p>
             </div>
 
-            <!-- Tools Column -->
-            <div class="space-y-6">
-                <h2 class="text-3xl font-bold text-gray-900 font-funnel">Tools</h2>
-                <ul class="space-y-3">
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">Figma</span>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">Figjam</span>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">InVision</span>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">Photoshop</span>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
-                        <span class="text-gray-700">Illustrator</span>
-                    </li>
-                </ul>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Skills Card -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="flex items-center mb-8">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
+                            <span class="text-white text-xl">🎨</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 font-funnel">Design Skills</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center group hover:bg-purple-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">User Research & Analysis</span>
+                        </div>
+                        <div class="flex items-center group hover:bg-purple-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">Wireframing & Information Architecture</span>
+                        </div>
+                        <div class="flex items-center group hover:bg-purple-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">Interactive Prototyping</span>
+                        </div>
+                        <div class="flex items-center group hover:bg-purple-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">User Testing & Validation</span>
+                        </div>
+                        <div class="flex items-center group hover:bg-purple-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">UI/UX Design</span>
+                        </div>
+                        <div class="flex items-center group hover:bg-purple-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">Interaction Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Card -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="flex items-center mb-8">
+                        <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mr-4">
+                            <span class="text-white text-xl">⚡</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 font-funnel">Design Tools</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center group hover:bg-indigo-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">Figma</span>
+                        </div>
+                        <div class="flex items-center group hover:bg-indigo-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">FigJam</span>
+                        </div>
+                        <div class="flex items-center group hover:bg-indigo-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">InVision</span>
+                        </div>
+                        <div class="flex items-center group hover:bg-indigo-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">Adobe Photoshop</span>
+                        </div>
+                        <div class="flex items-center group hover:bg-indigo-50 p-3 rounded-xl transition-colors duration-200">
+                            <div class="w-3 h-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mr-4 group-hover:scale-110 transition-transform duration-200"></div>
+                            <span class="text-gray-700 font-medium">Adobe Illustrator</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-20">
+            <div class="bg-gradient-to-r from-purple-900 via-purple-800 to-indigo-900 rounded-3xl p-12 text-center relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white font-funnel mb-6">
+                        Let's Create Something Amazing
+                    </h2>
+                    <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                        Ready to bring your vision to life? I'd love to hear about your project and explore how we can work together.
+                    </p>
+                    <a href="mailto:grantcrowderdesign@gmail.com" 
+                       class="inline-flex items-center px-8 py-4 bg-white text-purple-900 font-semibold rounded-2xl hover:bg-purple-50 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <span class="mr-2">📧</span>
+                        Get In Touch
+                    </a>
+                </div>
+                <!-- Decorative elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
+            </div>
+        </section>
     </main>
 
     <footer>

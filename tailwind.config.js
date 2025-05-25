@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./index.html",
+    "./about.html",
     "./come-soon.html", 
     "./bankrate-data-center.html",
     "./bankrate-review-template.html",
