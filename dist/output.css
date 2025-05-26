@@ -1686,6 +1686,11 @@ video {
   color: rgb(235 240 255 / var(--tw-text-opacity, 1));
 }
 
+.text-purple-200 {
+  --tw-text-opacity: 1;
+  color: rgb(191 209 255 / var(--tw-text-opacity, 1));
+}
+
 .text-purple-300 {
   --tw-text-opacity: 1;
   color: rgb(160 174 255 / var(--tw-text-opacity, 1));
@@ -1729,6 +1734,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-white\/70 {
+  color: rgb(255 255 255 / 0.7);
 }
 
 .no-underline {
@@ -1882,6 +1891,10 @@ video {
 .hover\:text-purple-600:hover {
   --tw-text-opacity: 1;
   color: rgb(69 11 236 / var(--tw-text-opacity, 1));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:shadow-2xl:hover {
