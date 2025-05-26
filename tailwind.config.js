@@ -16,6 +16,7 @@ module.exports = {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
         'funnel': ['Funnel Display', 'sans-serif'],
         'inter': ['Inter', 'system-ui', 'sans-serif'],
+        'syne': ['Syne', 'sans-serif'],
       },
       colors: {
         'purple': {
