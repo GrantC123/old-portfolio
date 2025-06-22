@@ -8,8 +8,9 @@ class ProjectTile extends HTMLElement {
     }
   
     render() {
+        const href = this.getAttribute('href') || '#';
         this.innerHTML = `
-            <div class="group">
+            <a href="${href}" class="block group">
                 <div class="bg-white overflow-hidden rounded-2xl transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-xl">
                     <div class="p-4">    
                         <img 
@@ -25,7 +26,7 @@ class ProjectTile extends HTMLElement {
                         <span class="inline-block bg-white px-3 py-1 rounded-sm text-sm mb-4 border border-gray-200">${this.getAttribute('label')}</span>
                     </div>
                 </div>
-            </div>
+            </a>
         `;
     }
 }
