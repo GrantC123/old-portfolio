@@ -10,20 +10,23 @@ class ProjectTile extends HTMLElement {
     render() {
         const href = this.getAttribute('href') || '#';
         this.innerHTML = `
-            <a href="${href}" class="block group">
-                <div class="bg-white overflow-hidden rounded-2xl transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-xl">
-                    <div class="p-4">    
-                        <img 
-                            src="${this.getAttribute('image')}" 
-                            alt="${this.getAttribute('title')}"
-                            class="w-full h-[300px] object-cover rounded-lg"
-                        >
-                    </div>
-                    <div class="p-4">
-                        <span class="text-sm text-gray-600">${this.getAttribute('year')}</span>
-                        <h3 class="mt-2 mb-2 text-xl sm:text-2xl font-bold">${this.getAttribute('title')}</h3>
-                        <p class="text-sm sm:text-base text-gray-700 mb-4">${this.getAttribute('description')}</p>
-                        <span class="inline-block bg-white px-3 py-1 rounded-sm text-sm mb-4 border border-gray-200">${this.getAttribute('label')}</span>
+            <a href="${href}" class="block">
+                <div class="relative group w-full h-full">
+                    <div class="absolute inset-0 z-0 pointer-events-none transition-all duration-300 opacity-0 group-hover:opacity-100 bg-black rounded-xl border border-gray-900 translate-x-4 translate-y-4"></div>
+                    <div class="relative z-10 bg-white overflow-hidden border border-gray-900 rounded-xl transition-transform duration-300 group-hover:-translate-x-4 group-hover:-translate-y-4">
+                        <div>    
+                            <img 
+                                src="${this.getAttribute('image')}" 
+                                alt="${this.getAttribute('title')}"
+                                class="w-full h-[300px] object-cover"
+                            >
+                        </div>
+                        <div class="p-4">
+                            <span class="text-sm text-gray-600">${this.getAttribute('year')}</span>
+                            <h3 class="mt-2 mb-2 text-xl sm:text-2xl font-bold">${this.getAttribute('title')}</h3>
+                            <p class="text-sm sm:text-base text-gray-700 mb-4">${this.getAttribute('description')}</p>
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-coral-800 text-coral-100 rounded">${this.getAttribute('label')}</span>
+                        </div>
                     </div>
                 </div>
             </a>

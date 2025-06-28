@@ -5,11 +5,11 @@
   "installCommand": "npm install",
   "public": true,
   "cleanUrls": true,
-  "redirects": [
+  /*"redirects": [
     {
       "source": "/",
       "destination": "/come-soon.html",
       "permanent": false
     }
-  ]
+  ]*/
 } 

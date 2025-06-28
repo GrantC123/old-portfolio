@@ -2,4 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './typewriter.css'; 
+@import './typewriter.css';
+
+/* Custom shadow with no blur */
+.shadow-no-blur {
+  box-shadow: 0 4px 0 0 rgba(0,0,0,0.15);
+}
+
+/* Shift card by 24px up and left on hover */
+.group:hover .shift-up-left-24 {
+  transform: translate(-24px, -24px);
+}
+
+/* Ensure smooth transition for transform and shadow */
+.transition-transform-shadow {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Reset card position (default state) */
+.shift-up-left-0 {
+  transform: translate(0, 0);
+} 
