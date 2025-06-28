@@ -1,4 +1,4 @@
-import { createIcons, icons } from 'lucide';
+
 
 class PrimaryButton extends HTMLElement {
   static get observedAttributes() {
