@@ -1,5 +1,3 @@
-
-
 class PrimaryButton extends HTMLElement {
   static get observedAttributes() {
     return ['no-icon', 'href', 'download', 'target'];
@@ -47,8 +45,9 @@ class PrimaryButton extends HTMLElement {
   }
 
   replaceLucideIcons() {
-    createIcons({ icons, node: this.shadowRoot });
-  }
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons({ node: this.shadowRoot });  }  
+    }
 
   render() {
     const href = this.getAttribute('href');
