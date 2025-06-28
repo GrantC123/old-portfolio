@@ -25,5 +25,8 @@
   "devDependencies": {
     "http-server": "^14.1.1",
     "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "lucide": "^0.525.0"
   }
 }
