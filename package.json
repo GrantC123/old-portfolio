@@ -4,13 +4,11 @@
   "description": "Grant Crowder's Portfolio",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "serve": "http-server . -p 3000 -c-1",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "npm run watch:css & npm run serve",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "repository": {
     "type": "git",
@@ -24,10 +22,8 @@
   },
   "homepage": "https://github.com/GrantC123/old-portfolio#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
     "http-server": "^14.1.1",
-    "tailwindcss": "^3.4.17",
-    "vite": "^5.2.0"
+    "tailwindcss": "^3.4.17"
   },
   "dependencies": {
     "lucide": "^0.525.0"
