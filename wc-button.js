@@ -1,4 +1,4 @@
-import { createIcons } from 'lucide';
+import { createIcons, icons } from 'lucide';
 
 class PrimaryButton extends HTMLElement {
   static get observedAttributes() {
@@ -47,7 +47,7 @@ class PrimaryButton extends HTMLElement {
   }
 
   replaceLucideIcons() {
-    createIcons({ node: this.shadowRoot });
+    createIcons({ icons, node: this.shadowRoot });
   }
 
   render() {
