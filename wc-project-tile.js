@@ -12,8 +12,8 @@ class ProjectTile extends HTMLElement {
         this.innerHTML = `
             <a href="${href}" class="block">
                 <div class="relative group w-full h-full">
-                    <div class="absolute inset-0 z-0 pointer-events-none transition-all duration-300 opacity-0 group-hover:opacity-100 bg-black rounded-xl border border-gray-900 translate-x-4 translate-y-4"></div>
-                    <div class="relative z-10 bg-white overflow-hidden border border-gray-900 rounded-xl transition-transform duration-300 group-hover:-translate-x-4 group-hover:-translate-y-4">
+                    <div class="absolute inset-0 z-0 pointer-events-none transition-all duration-300 opacity-0 group-hover:opacity-100 bg-black rounded-xl border border-gray-900"></div>
+                    <div class="relative z-10 bg-white overflow-hidden border border-gray-900 rounded-xl transition-transform duration-300 group-hover:-translate-x-3 group-hover:-translate-y-3">
                         <div>    
                             <img 
                                 src="${this.getAttribute('image')}" 
