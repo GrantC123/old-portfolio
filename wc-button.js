@@ -61,7 +61,7 @@ class PrimaryButton extends HTMLElement {
       <style>
         :host { display: inline-block; }
         .btn {
-          background: #00c6e5;
+          background: #53E5F8;
           border: none;
           border-radius: 0.5rem;
           padding: 1rem 1.5rem;
@@ -72,11 +72,11 @@ class PrimaryButton extends HTMLElement {
           font-size: 18px;
           color: #000915;
           cursor: pointer;
-          transition: transform 0.15s;
+          transition: background-color 0.2s, transform 0.2s;
           text-decoration: none;
         }
         .btn.has-icon { gap: 0.625rem; }
-        .btn:hover { transform: scale(1.04); }
+        .btn:hover { background: #00C6E5; }
         .icon { width: 1.5rem; height: 1.5rem; }
         @media (max-width: 600px) {
           .btn { padding: 0.75rem 1rem; font-size: 15px; }

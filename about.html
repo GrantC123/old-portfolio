@@ -169,7 +169,6 @@
         <!-- Core Philosophies Section -->
         <section class="py-20 mx-auto px-4 sm:px-6 lg:px-8 bg-stone-50">
             <div class="text-center mb-16">
-                
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 font-syne mb-6">
                     Core Design Philosophies
                 </h2>
@@ -178,72 +177,110 @@
                 </p>
             </div>
 
-            <!-- Horizontal Scroll Component -->
-            <horizontal-scroll>
-                <!-- Philosophy 1: Servant Leadership -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-900">
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-gray-900 font-syne">Servant Leadership</h3>
+            <!-- Accordion Component -->
+            <div class="max-w-3xl mx-auto divide-y divide-[#101828] border-t border-[#101828]" id="philosophy-accordion">
+                <!-- Item 1 -->
+                <div>
+                    <button type="button" class="w-full flex items-center justify-between py-6 font-syne font-bold text-[24px] leading-[32px] text-[#000915] text-left focus:outline-none transition-colors duration-150 accordion-header hover:bg-[#f5f5f4] focus:bg-[#f5f5f4]">
+                        <span>Servant Leadership</span>
+                        <svg class="w-6 h-6 text-gray-400 transition-transform duration-300 accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+                    </button>
+                    <div class="pb-6 text-gray-600 text-[18px] font-inter leading-relaxed accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        I embody a holistic approach to guiding and empowering others. By leading with empathy, serving the needs of my team, and prioritizing their growth and well-being, I foster a culture of support, collaboration, and inspiration. This approach transcends traditional management by emphasizing vision, empowerment, and nurturing individual growth, inspiring others to achieve their full potential and creating a lasting, positive impact within the team.
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        I embody a holistic approach to guiding and empowering others. By leading with empathy, serving the needs of my team, and prioritizing their growth and well-being, I foster a culture of support, collaboration, and inspiration. This approach transcends traditional management by emphasizing vision, empowerment, and nurturing individual growth, inspiring others to achieve their full potential and creating a lasting, positive impact within the                    </p>
-                
                 </div>
-
-                <!-- Philosophy 2: Done is better than perfecty -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-900">
-                    <div class="mb-6">
-                       
-                        <h3 class="text-2xl font-bold text-gray-900 font-syne">Done is better than perfect</h3>
+                <!-- Item 2 -->
+                <div>
+                    <button type="button" class="w-full flex items-center justify-between py-6 font-syne font-bold text-[24px] leading-[32px] text-[#000915] text-left focus:outline-none transition-colors duration-150 accordion-header hover:bg-[#f5f5f4] focus:bg-[#f5f5f4]">
+                        <span>Done is better than perfect</span>
+                        <svg class="w-6 h-6 text-gray-400 transition-transform duration-300 accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+                    </button>
+                    <div class="pb-6 text-gray-600 text-[18px] font-inter leading-relaxed accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        I believe that achieving completion is more valuable than striving for an unattainable ideal. Agility and iteration is key. I believe in putting forward a quality product but not at the expense of putting in front of users and getting results to iterate. Fail fast. High increase in productivity.
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        I believe that achieving completion is more valuable than striving for an unattainable ideal. Agility and iteration is key. I believe in putting forward a quality product but not at the expense of putting in front of users and getting results to iterate. Fail fast. High increase in productivity.                     </p>
                 </div>
-
-                <!-- Philosophy 3: Results Driven -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-900">
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-gray-900 font-syne">Results Driven</h3>
+                <!-- Item 3 -->
+                <div>
+                    <button type="button" class="w-full flex items-center justify-between py-6 font-syne font-bold text-[24px] leading-[32px] text-[#000915] text-left focus:outline-none transition-colors duration-150 accordion-header hover:bg-[#f5f5f4] focus:bg-[#f5f5f4]">
+                        <span>Results Driven</span>
+                        <svg class="w-6 h-6 text-gray-400 transition-transform duration-300 accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+                    </button>
+                    <div class="pb-6 text-gray-600 text-[18px] font-inter leading-relaxed accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        Being a results driver means that I am focused on achieving tangible outcomes and making measurable progress towards goals. I prioritize actions that lead to concrete results, whether it's in project delivery, problem-solving, or decision-making. By staying focused on outcomes and driving towards success, I aim to create meaningful impact and drive continuous improvement in all aspects of my work.
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Being a results driver means that I am focused on achieving tangible outcomes and making measurable progress towards goals. I prioritize actions that lead to concrete results, whether it's in project delivery, problem-solving, or decision-making. By staying focused on outcomes and driving towards success, I aim to create meaningful impact and drive continuous improvement in all aspects of my work.                    </p>
-                    
                 </div>
-
-                <!-- Philosophy 4: Business + Design Focused -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-900">
-                    <div class="mb-6">
-                       
-                        <h3 class="text-2xl font-bold text-gray-900 font-syne">Business + Design Focused</h3>
+                <!-- Item 4 -->
+                <div>
+                    <button type="button" class="w-full flex items-center justify-between py-6 font-syne font-bold text-[24px] leading-[32px] text-[#000915] text-left focus:outline-none transition-colors duration-150 accordion-header hover:bg-[#f5f5f4] focus:bg-[#f5f5f4]">
+                        <span>Business + Design Focused</span>
+                        <svg class="w-6 h-6 text-gray-400 transition-transform duration-300 accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+                    </button>
+                    <div class="pb-6 text-gray-600 text-[18px] font-inter leading-relaxed accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        Being both business and design focused entails striking a balance between creative innovation and strategic thinking. It involves understanding the needs of the business, aligning design solutions with organizational goals, and demonstrating the value of design in driving business success. By integrating business acumen with design expertise, I aim to create solutions that not only delight users but also contribute to the overall success and growth of the organization.
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Being both business and design focused entails striking a balance between creative innovation and strategic thinking. It involves understanding the needs of the business, aligning design solutions with organizational goals, and demonstrating the value of design in driving business success. By integrating business acumen with design expertise, I aim to create solutions that not only delight users but also contribute to the overall success and growth of the organization.                    </p>
-                        
                 </div>
-
-                <!-- Philosophy 5: Consistency is King -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-900">
-                        <div class="mb-6">
-                      
-                        <h3 class="text-2xl font-bold text-gray-900 font-syne">Consistency is King</h3>
+                <!-- Item 5 -->
+                <div>
+                    <button type="button" class="w-full flex items-center justify-between py-6 font-syne font-bold text-[24px] leading-[32px] text-[#000915] text-left focus:outline-none transition-colors duration-150 accordion-header hover:bg-[#f5f5f4] focus:bg-[#f5f5f4]">
+                        <span>Consistency is King</span>
+                        <svg class="w-6 h-6 text-gray-400 transition-transform duration-300 accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+                    </button>
+                    <div class="pb-6 text-gray-600 text-[18px] font-inter leading-relaxed accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        "Consistency is king" serves as my design mantra, emphasizing the importance of maintaining a cohesive and harmonious visual language across all aspects of a project. By upholding consistency in design elements such as layout, typography, color schemes, and user interactions, I strive to enhance user experience, build trust, and create a polished and unified product that resonates with its audience.
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        "Consistency is king" serves as my design mantra, emphasizing the importance of maintaining a cohesive and harmonious visual language across all aspects of a project. By upholding consistency in design elements such as layout, typography, color schemes, and user interactions, I strive to enhance user experience, build trust, and create a polished and unified product that resonates with its                    </p>
-                    
                 </div>
-
-                <!-- Philosophy 6: I am not the user -->
-                    <div class="bg-white rounded-3xl p-8 border border-gray-900">
-                    <div class="mb-6">
-                       
-                        <h3 class="text-2xl font-bold text-gray-900 font-syne">Testing & Iteration</h3>
+                <!-- Item 6 -->
+                <div class="border-b-0">
+                    <button type="button" class="w-full flex items-center justify-between py-6 font-syne font-bold text-[24px] leading-[32px] text-[#000915] text-left focus:outline-none transition-colors duration-150 accordion-header hover:bg-[#f5f5f4] focus:bg-[#f5f5f4]">
+                        <span>Testing & Iteration</span>
+                        <svg class="w-6 h-6 text-gray-400 transition-transform duration-300 accordion-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+                    </button>
+                    <div class="pb-6 text-gray-600 text-[18px] font-inter leading-relaxed accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        Recognizing that "I am not the user" is a fundamental principle that reminds me to approach design and decision-making from the perspective of the end user. By setting aside personal preferences and biases, I can better empathize with the needs, preferences, and experiences of the actual users, leading to more user-centric and effective solutions.
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-4">
-                        Recognizing that "I am not the user" is a fundamental principle that reminds me to approach design and decision-making from the perspective of the end user. By setting aside personal preferences and biases, I can better empathize with the needs, preferences, and experiences of the actual users, leading to more user-centric and effective solutions.                    </p>
-                
                 </div>
-            </horizontal-scroll>
-
+            </div>
+            <style>
+            .accordion-header .accordion-chevron {
+                transform: rotate(0deg);
+            }
+            .accordion-header.active .accordion-chevron {
+                transform: rotate(90deg);
+            }
+            .accordion-content {
+                transition-property: max-height, padding;
+                transition-duration: 300ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                max-height: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .accordion-content.open {
+                max-height: 500px;
+                padding-top: 0.5rem;
+                padding-bottom: 1.5rem;
+            }
+            </style>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const headers = document.querySelectorAll('#philosophy-accordion .accordion-header');
+                const contents = document.querySelectorAll('#philosophy-accordion .accordion-content');
+                headers.forEach((header, idx) => {
+                    header.addEventListener('click', function() {
+                        const content = contents[idx];
+                        const isOpen = content.classList.contains('open');
+                        // Close all
+                        headers.forEach(h => h.classList.remove('active'));
+                        contents.forEach(c => c.classList.remove('open'));
+                        // Open if not already
+                        if (!isOpen) {
+                            header.classList.add('active');
+                            content.classList.add('open');
+                        }
+                    });
+                });
+            });
+            </script>
 
         <!-- Call to Action Section -->
         <section class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
