@@ -3,11 +3,14 @@ module.exports = {
   content: [
     "./index.html",
     "./about.html",
+    "./visual-design.html",
     "./come-soon.html", 
     "./bankrate-data-center.html",
     "./bankrate-review-template.html",
     "./tailwind-v4-demo.html",
     "./**/*.js",
+    "./*.html",           // All HTML files in the root
+    "./src/**/*.{js,ts}",
     "!./node_modules/**/*"
   ],
   theme: {
