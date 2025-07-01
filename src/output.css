@@ -2197,6 +2197,10 @@ video {
     margin-top: 0px;
   }
 
+  .md\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .md\:h-16 {
     height: 4rem;
   }
