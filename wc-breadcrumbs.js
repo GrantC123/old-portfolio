@@ -25,7 +25,7 @@ if (typeof HTMLElement !== 'undefined') {
                 currentPageClasses = 'text-purple-200 font-medium';
             } else {
                 // Default color scheme
-                linkClasses = 'no-underline text-gray-500 hover:text-purple-600 transition-colors duration-300';
+                linkClasses = 'no-underline text-gray-500 hover:text-coral-500 transition-colors duration-300';
                 separatorClasses = 'mx-2 text-gray-200';
                 currentPageClasses = 'text-gray-900';
             }
