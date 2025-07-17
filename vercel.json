@@ -7,7 +7,7 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/((?!come-soon\\.html).*)",
       "destination": "/come-soon.html",
       "permanent": false
     }
