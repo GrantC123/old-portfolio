@@ -18,20 +18,26 @@
   <meta name="sogou" content="noindex">
   <meta name="360" content="noindex">
 </head>
-<body class="bg-gray-50 font-sans antialiased">
+<body class="bg-stone-50 font-sans antialiased">
   <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-md w-full space-y-8">
-      <div>
-        <h2 class="mt-6 text-center text-3xl font-bold text-gray-900 font-syne">
-          Access Portfolio
-
-        </h2>
-        <p class="mt-2 text-center text-sm text-gray-600">
-          This portfolio is password protected for confidentiality. Enter the credentials provided to continue.
-        </p>
-      </div>
-      
-      <form id="loginForm" class="mt-8 space-y-6">
+    <div class="max-w-md w-full">
+      <!-- White container box -->
+      <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-8 space-y-8">
+        <div>
+          <!-- Logo -->
+          <div class="flex justify-center mb-6">
+            <img src="Images/gc-mark.svg" alt="Grant Crowder Logo" class="h-16 w-auto">
+          </div>
+          
+          <h2 class="text-center text-3xl font-bold text-gray-900 font-syne">
+            Access Portfolio
+          </h2>
+          <p class="mt-2 text-center text-sm text-gray-600">
+            This portfolio is password protected for confidentiality. Enter the credentials provided to continue.
+          </p>
+        </div>
+        
+        <form id="loginForm" class="mt-8 space-y-6">
         <div class="space-y-4">
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
@@ -66,10 +72,10 @@
           </div>
         </div>
 
-        <div id="loadingMessage" class="hidden bg-blue-50 border border-blue-200 rounded-md p-4">
+        <div id="loadingMessage" class="hidden bg-green-50 border border-green-200 rounded-md p-4">
           <div class="flex">
             <div class="ml-3">
-              <h3 class="text-sm font-medium text-blue-800">Signing in...</h3>
+              <h3 class="text-sm font-medium text-green-800">Signing in...</h3>
             </div>
           </div>
         </div>
@@ -80,6 +86,7 @@
           </primary-button>
         </div>
       </form>
+      </div>
     </div>
   </div>
 
