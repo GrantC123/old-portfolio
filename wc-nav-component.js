@@ -5,6 +5,44 @@ class NavigationMenu extends HTMLElement {
 
     connectedCallback() {
         this.render();
+        this.setupLogout();
+    }
+
+    setupLogout() {
+        // Wait a bit for the render to complete
+        setTimeout(() => {
+            const logoutBtn = this.querySelector('#navLogoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    console.log('Logout button clicked'); // Debug log
+                    
+                    try {
+                        // Check if Supabase is available globally
+                        if (window.supabaseClient) {
+                            const { error } = await window.supabaseClient.auth.signOut();
+                            
+                            if (error) {
+                                console.error('Logout error:', error);
+                                alert('Logout failed: ' + error.message);
+                            } else {
+                                console.log('Logout successful');
+                            }
+                        } else {
+                            console.log('No Supabase client found, performing simple logout');
+                        }
+                        
+                        // Always redirect to login page
+                        window.location.href = '/login.html';
+                        
+                    } catch (logoutError) {
+                        console.error('Error during logout:', logoutError);
+                        // Fallback: just redirect to login
+                        window.location.href = '/login.html';
+                    }
+                });
+            }
+        }, 100);
     }
 
     render() {
@@ -29,6 +67,7 @@ class NavigationMenu extends HTMLElement {
                     <li><a href="about.html" class="text-gray-900 no-underline hover:text-coral-500 transition-colors">About</a></li>
                     <!-- <li><a href="PDF/Grant Crowder - Resume.pdf" class="text-gray-900 no-underline hover:text-coral-500 transition-colors">Resume</a></li> -->
                     <li><a href="https://www.linkedin.com/in/grantcrowder/" class="text-gray-900 hover:text-coral-500 transition-colors"><img src="Images/linkedin.svg" alt="LinkedIn" class="h-5 w-5"></a></li>
+                    <li><button id="navLogoutBtn" class="logout-btn text-gray-900 no-underline hover:text-coral-500 transition-colors text-sm border border-gray-300 px-3 py-1 rounded-md hover:border-coral-500">Logout</button></li>
                 </ul>
                
                 </div>

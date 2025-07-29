@@ -26,6 +26,7 @@
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
-    "lucide": "^0.525.0"
+    "lucide": "^0.525.0",
+    "@supabase/supabase-js": "^2.39.3"
   }
 }
