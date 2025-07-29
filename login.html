@@ -115,7 +115,16 @@
     // Handle form submission
     loginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+      await handleLogin();
+    });
+
+    // Handle button click directly (since it's in shadow DOM)
+    loginButton.addEventListener('click', async (e) => {
+      e.preventDefault();
+      await handleLogin();
+    });
+
+    async function handleLogin() {
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
@@ -144,7 +153,7 @@
       } finally {
         showLoading(false);
       }
-    });
+    }
 
     function showError(message) {
       errorText.textContent = message;
