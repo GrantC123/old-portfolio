@@ -11,8 +11,7 @@
         return;
     }
     
-    // Hide page content initially
-    document.documentElement.style.visibility = 'hidden';
+    // Note: CSS is already hiding the page via <style id="auth-hide"> in HTML head
     
     // Load Supabase and check authentication
     function loadSupabaseAndCheck() {
@@ -50,8 +49,11 @@
             
             if (user) {
                 console.log('User authenticated:', user.email);
-                // Show the page
-                document.documentElement.style.visibility = 'visible';
+                // Show the page by removing the hide style
+                const authHideStyle = document.getElementById('auth-hide');
+                if (authHideStyle) {
+                    authHideStyle.remove();
+                }
             } else {
                 console.log('No user found, redirecting to login');
                 redirectToLogin();
