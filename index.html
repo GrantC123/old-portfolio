@@ -244,36 +244,7 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="wc-button.js"></script>
     
-    <!-- Load Supabase from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
-    <script>
-        // Initialize Supabase client globally
-        const supabaseUrl = 'https://yjizrkagqyzftumbkdym.supabase.co';
-        const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqaXpya2FncXl6ZnR1bWJrZHltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM4MjA0MDksImV4cCI6MjA2OTM5NjQwOX0.BWX7ofphbS47z78OTxe3A0aySfzoAtYkSBExtKEEjgA';
-        window.supabaseClient = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
-        
-        // Debug authentication status
-        console.log('Supabase client initialized');
-        
-        // Simple auth check
-        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-            console.log('Development mode - showing page immediately');
-            document.body.style.visibility = 'visible';
-        } else {
-            // In production, check authentication
-            window.supabaseClient.auth.getUser().then(({ data: { user }, error }) => {
-                if (error) {
-                    console.error('Auth check error:', error);
-                    window.location.href = '/login.html';
-                } else if (user) {
-                    console.log('User authenticated:', user.email);
-                    document.body.style.visibility = 'visible';
-                } else {
-                    console.log('No user found, redirecting to login');
-                    window.location.href = '/login.html';
-                }
-            });
-        }
-    </script>
+    <!-- Authentication check -->
+    <script src="auth-check.js"></script>
 </body>
 </html>
