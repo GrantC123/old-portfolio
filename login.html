@@ -39,7 +39,7 @@
               name="email" 
               type="email" 
               required 
-              class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+              class="mt-1 appearance-none relative block w-full px-6 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-coral-500 focus:border-coral-500 focus:z-10 text-base" 
               placeholder="Enter your email"
             />
           </div>
@@ -51,7 +51,7 @@
               name="password" 
               type="password" 
               required 
-              class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+              class="mt-1 appearance-none relative block w-full px-6 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-coral-500 focus:border-coral-500 focus:z-10 text-base" 
               placeholder="Enter your password"
             />
           </div>
@@ -73,14 +73,10 @@
           </div>
         </div>
 
-        <div>
-          <button 
-            type="submit" 
-            id="loginButton"
-            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
+        <div class="flex justify-center">
+          <primary-button id="loginButton" style="max-width: 300px;">
             Sign In
-          </button>
+          </primary-button>
         </div>
       </form>
     </div>
@@ -88,6 +84,9 @@
 
   <!-- Load Supabase from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
+  <!-- Load button component -->
+  <script src="wc-button.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <script>
     // Supabase configuration
     const supabaseUrl = 'https://yjizrkagqyzftumbkdym.supabase.co';
@@ -159,11 +158,13 @@
     function showLoading(isLoading) {
       if (isLoading) {
         loadingMessage.classList.remove('hidden');
-        loginButton.disabled = true;
+        loginButton.style.opacity = '0.5';
+        loginButton.style.pointerEvents = 'none';
         loginButton.textContent = 'Signing in...';
       } else {
         loadingMessage.classList.add('hidden');
-        loginButton.disabled = false;
+        loginButton.style.opacity = '1';
+        loginButton.style.pointerEvents = 'auto';
         loginButton.textContent = 'Sign In';
       }
     }
