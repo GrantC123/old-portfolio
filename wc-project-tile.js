@@ -19,15 +19,15 @@ class ProjectTile extends HTMLElement {
             <a href="${href}" class="block h-full group relative">
                 <div class="absolute inset-0 z-0 pointer-events-none transition-all duration-300 opacity-0 group-hover:opacity-100 bg-black rounded-2xl border border-gray-900"></div>
                 <div class="relative z-10 bg-white overflow-hidden border border-gray-900 rounded-2xl transition-transform duration-300 group-hover:-translate-x-3 group-hover:-translate-y-3 h-full flex flex-col">
-                    <div class="flex flex-col md:flex-row bg-white overflow-hidden w-full h-full">
-                        <div class="w-full md:w-1/2 h-[320px] md:h-[400px] flex-shrink-0">
+                    <div class="flex flex-col bg-white overflow-hidden w-full h-full">
+                        <div class="w-full h-[320px] flex-shrink-0">
                             <img 
                                 src="${image}" 
                                 alt="${title}"
-                                class="w-full h-full object-cover object-center rounded-t-2xl md:rounded-t-none md:rounded-l-2xl md:rounded-r-none"
+                                class="w-full h-full object-cover object-center rounded-t-2xl"
                             >
                         </div>
-                        <div class="w-full md:w-1/2 flex flex-col justify-between p-8 gap-8 rounded-b-2xl md:rounded-b-none md:rounded-r-2xl">
+                        <div class="w-full flex flex-col justify-between p-8 gap-8 rounded-b-2xl">
                             <div class="flex flex-col gap-5">
                                 <span class="uppercase text-[#606060] text-[16px] tracking-wider font-bold" style="font-family: Roboto, Arial, sans-serif;">${category}</span>
                                 <h3 class="font-syne font-bold text-[32px] leading-[1.15] text-[#011205]">${title}</h3>
