@@ -182,12 +182,14 @@
         loadingMessage.classList.remove('hidden');
         loginButton.style.opacity = '0.5';
         loginButton.style.pointerEvents = 'none';
-        loginButton.textContent = 'Signing in...';
+        // Update button text - this works by changing the slot content
+        loginButton.innerHTML = 'Signing in...';
       } else {
         loadingMessage.classList.add('hidden');
         loginButton.style.opacity = '1';
         loginButton.style.pointerEvents = 'auto';
-        loginButton.textContent = 'Sign In';
+        // Restore original text
+        loginButton.innerHTML = 'Sign In';
       }
     }
   </script>
