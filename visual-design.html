@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <!-- Anti-flicker CSS for authentication -->
+    <style id="auth-hide">html{visibility:hidden!important}</style>
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
     <meta name="bingbot" content="noindex">
@@ -249,5 +251,8 @@
         window.lucide.createIcons({ node: document.getElementById('lightbox-overlay') });
       }
     </script>
+    
+    <!-- Authentication check -->
+    <script src="auth-check.js"></script>
 </body>
 </html>
