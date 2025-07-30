@@ -288,11 +288,11 @@
                     header.addEventListener('click', function() {
                         const content = contents[idx];
                         const isOpen = content.classList.contains('open');
-                        // Close all
-                        headers.forEach(h => h.classList.remove('active'));
-                        contents.forEach(c => c.classList.remove('open'));
-                        // Open if not already
-                        if (!isOpen) {
+                        // Toggle the clicked accordion only
+                        if (isOpen) {
+                            header.classList.remove('active');
+                            content.classList.remove('open');
+                        } else {
                             header.classList.add('active');
                             content.classList.add('open');
                         }
