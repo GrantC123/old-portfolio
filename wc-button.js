@@ -59,10 +59,26 @@ class PrimaryButton extends HTMLElement {
     const targetAttr = href ? `target="${target}"` : '';
     this.shadowRoot.innerHTML = `
       <style>
-        :host { display: inline-block; }
+        :host { 
+          display: inline-block; 
+          position: relative;
+        }
+        .btn-wrapper {
+          position: relative;
+          display: inline-block;
+        }
+        .btn-shadow {
+          position: absolute;
+          inset: 0;
+          background: black;
+          border-radius: 0.5rem;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          pointer-events: none;
+        }
         .btn {
           background: #53E5F8;
-          border: none;
+          border: 1px solid #000915;
           border-radius: 0.5rem;
           padding: 1rem 1.5rem;
           display: flex;
@@ -72,20 +88,28 @@ class PrimaryButton extends HTMLElement {
           font-size: 18px;
           color: #000915;
           cursor: pointer;
-          transition: background-color 0.2s, transform 0.2s;
+          transition: all 0.3s ease;
           text-decoration: none;
+          position: relative;
+          z-index: 10;
         }
         .btn.has-icon { gap: 0.625rem; }
-        .btn:hover { background: #00C6E5; }
+        .btn-wrapper:hover .btn-shadow { opacity: 1; }
+        .btn-wrapper:hover .btn { 
+          transform: translate(-12px, -12px);
+        }
         .icon { width: 1.5rem; height: 1.5rem; }
         @media (max-width: 600px) {
           .btn { padding: 0.75rem 1rem; font-size: 15px; }
         }
       </style>
-      <${tag} class="btn" ${hrefAttr} ${downloadAttr} ${targetAttr}>
-        <slot>Button</slot>
-        <span class="icon"><slot name="icon"></slot></span>
-      </${tag}>
+      <div class="btn-wrapper">
+        <div class="btn-shadow"></div>
+        <${tag} class="btn" ${hrefAttr} ${downloadAttr} ${targetAttr}>
+          <slot>Button</slot>
+          <span class="icon"><slot name="icon"></slot></span>
+        </${tag}>
+      </div>
     `;
   }
 }
