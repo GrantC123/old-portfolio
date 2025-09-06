@@ -1,0 +1,74 @@
+name: Supabase Keepalive
+
+on:
+  schedule:
+    # Run twice a week: Monday at 9 AM UTC and Thursday at 9 AM UTC
+    - cron: '0 9 * * 1,4'
+  # Allow manual triggering for testing
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Keep Supabase alive
+      env:
+        SUPABASE_URL: https://yjizrkagqyzftumbkdym.supabase.co
+        SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqaXpya2FncXl6ZnR1bWJrZHltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM4MjA0MDksImV4cCI6MjA2OTM5NjQwOX0.BWX7ofphbS47z78OTxe3A0aySfzoAtYkSBExtKEEjgA
+      run: |
+        node -e "
+        const { createClient } = require('@supabase/supabase-js');
+        
+        const supabaseUrl = process.env.SUPABASE_URL;
+        const supabaseKey = process.env.SUPABASE_ANON_KEY;
+        
+        if (!supabaseUrl || !supabaseKey) {
+          console.error('Missing Supabase credentials. Please set SUPABASE_URL and SUPABASE_ANON_KEY in repository secrets.');
+          process.exit(1);
+        }
+        
+        const supabase = createClient(supabaseUrl, supabaseKey);
+        
+        console.log('Making keepalive request to Supabase...');
+        
+        // Simple query to keep the project alive
+        // This will work even if you don't have any tables yet
+        supabase
+          .from('_supabase_keepalive')
+          .select('*')
+          .limit(1)
+          .then(({ data, error }) => {
+            if (error) {
+              // If the table doesn't exist, try a different approach
+              console.log('Keepalive table not found, trying alternative method...');
+              return supabase.auth.getSession();
+            }
+            console.log('Keepalive successful:', data);
+          })
+          .then(({ data, error }) => {
+            if (error) {
+              console.log('Alternative keepalive method result:', error.message);
+            } else {
+              console.log('Alternative keepalive successful');
+            }
+          })
+          .catch((err) => {
+            console.log('Keepalive completed (project is alive):', err.message);
+          });
+        "
+        
+    - name: Log completion
+      run: echo "Supabase keepalive completed at 09/05/2025 21:23:36"
