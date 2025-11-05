@@ -16,11 +16,14 @@
     <title>Bankrate Data Center</title>
     <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/dark-theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:wght@100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
     <!-- Anti-flicker CSS for authentication -->
     <style id="auth-hide">html{visibility:hidden!important}</style>
+    <!-- Dark mode initialization -->
+    <script src="src/dark-mode-init.js"></script>
     <script src="wc-breadcrumbs.js" defer></script>
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
@@ -97,12 +100,104 @@
         <main class="flex-1 min-w-[300px] p-6">
              
     
+                <!-- Problem Statement Section -->
                 <section class="my-12 py-12">
-                    <div class="max-w-4xl mx-auto text-center">
-                        <h2 class="text-2xl font-extrabold font-syne mb-6">Problem statement</h2>
-                        <p class="text-3xl font-light text-gray-800 leading-snug">Prior to this project, Bankrate's valuable financial data was scattered across multiple survey pages and formats, making it difficult for journalists and content creators to discover, access, and cite authoritative information. This fragmentation limited our visibility in the media and reduced opportunities for earning backlinks, ultimately impacting Bankrate's search ranking and authority.</p>
+                    <div class="max-w-4xl mx-auto">
+                        <div class="flex items-center justify-start pb-8 pt-16">
+                            <h2 class="text-4xl font-bold font-syne text-gray-900 leading-10">Problem statement</h2>
+                        </div>
+                        <div class="flex items-center justify-center pb-6">
+                            <p class="text-xl font-normal font-syne text-gray-700 leading-7">Prior to this project, Bankrate's valuable financial data was scattered across multiple survey pages and formats, making it difficult for journalists and content creators to discover, access, and cite authoritative information. This fragmentation limited our visibility in the media and reduced opportunities for earning backlinks, ultimately impacting Bankrate's search ranking and authority.</p>
+                        </div>
                     </div>
                 </section>
+
+                <!-- Section Divider -->
+                <div class="max-w-4xl mx-auto py-8">
+                    <hr class="border-t-2 border-gray-300 w-full">
+                </div>
+
+                <!-- Goals and KPIs Section -->
+                <section class="my-12 py-0">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="flex flex-col md:flex-row gap-4 items-start justify-center">
+                            <!-- Goals Column -->
+                            <div class="flex-1 flex flex-col items-start justify-start">
+                                <div class="flex items-center justify-start pb-6 pt-12 w-full">
+                                    <h3 class="text-3xl font-bold font-syne text-gray-900 leading-9">Goals</h3>
+                                </div>
+                                <div class="flex flex-col gap-4 items-start justify-start pl-4 py-6 w-full">
+                                    <div class="flex items-start justify-start w-full">
+                                        <div class="flex items-start justify-start pr-2">
+                                            <div class="text-lg font-bold font-syne text-blue-600 text-right w-6 leading-7">1.</div>
+                                        </div>
+                                        <div class="flex-1 flex items-center justify-center">
+                                            <div class="text-lg font-normal font-syne text-gray-600 leading-7">
+                                                <p class="mb-0">Make BR's proprietary data available to media outlets, news publishers</p>
+                                                <p>accessibility to the data</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start justify-start w-full">
+                                        <div class="flex items-start justify-start pr-2">
+                                            <div class="text-lg font-bold font-syne text-blue-600 text-right w-6 leading-7">2.</div>
+                                        </div>
+                                        <div class="flex-1 flex items-center justify-center">
+                                            <div class="text-lg font-normal font-syne text-gray-600 leading-7">
+                                                <p>Signaling to Google that we are the authority on this personal finance data</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KPIs Column -->
+                            <div class="flex-1 flex flex-col items-start justify-start">
+                                <div class="flex items-center justify-start pb-6 pt-12 w-full">
+                                    <h3 class="text-3xl font-bold font-syne text-gray-900 leading-9">KPI's</h3>
+                                </div>
+                                <div class="flex flex-col gap-4 items-start justify-start pl-4 py-6 w-full">
+                                    <div class="flex items-start justify-start w-full">
+                                        <div class="flex items-start justify-start pr-2">
+                                            <div class="text-lg font-bold font-syne text-blue-600 text-right w-6 leading-7">1.</div>
+                                        </div>
+                                        <div class="flex-1 flex items-center justify-center">
+                                            <div class="text-lg font-normal font-syne text-gray-600 leading-7">
+                                                <p>Links to data charts</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start justify-start w-full">
+                                        <div class="flex items-start justify-start pr-2">
+                                            <div class="text-lg font-bold font-syne text-blue-600 text-right w-6 leading-7">2.</div>
+                                        </div>
+                                        <div class="flex-1 flex items-center justify-center">
+                                            <div class="text-lg font-normal font-syne text-gray-600 leading-7">
+                                                <p>Clicks to articles or other resources</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start justify-start w-full">
+                                        <div class="flex items-start justify-start pr-2">
+                                            <div class="text-lg font-bold font-syne text-blue-600 text-right w-6 leading-7">3.</div>
+                                        </div>
+                                        <div class="flex-1 flex items-center justify-center">
+                                            <div class="text-lg font-normal font-syne text-gray-600 leading-7">
+                                                <p>Number of interactions with charts</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Divider -->
+                <div class="max-w-4xl mx-auto py-8">
+                    <hr class="border-t-2 border-gray-300 w-full">
+                </div>
+
                 <section class="my-12 py-12">
                     <div class="max-w-4xl mx-auto">
                         <h2 class="text-2xl font-extrabold font-syne mb-4">Process</h2>
@@ -129,13 +224,14 @@
                         </p>
                     </div>
                 </section>
+                <!-- My Role and Contribution Section -->
                 <section class="my-12 py-12">
                     <div class="max-w-4xl mx-auto">
-                        <div class="mb-4">
-                            <h2 class="text-2xl font-extrabold font-syne leading-8">My role and contribution</h2>
+                        <div class="flex items-center justify-start pb-8 pt-16">
+                            <h2 class="text-4xl font-bold font-syne text-gray-900 leading-10">My role and contribution</h2>
                         </div>
-                        <div>
-                            <p class="text-xl text-gray-800 leading-relaxed">I managed the full design process—from synthesizing business goals and user research, to facilitating cross-functional workshops and iterating on wireframes and prototypes in Figma. I collaborated closely with engineers to ensure feasibility, contributed to the design system, and presented progress and rationale to senior stakeholders, incorporating their feedback to refine the final solution.</p>
+                        <div class="flex items-center justify-center pb-6">
+                            <p class="text-xl font-normal font-syne text-gray-700 leading-7">I managed the full design process—from synthesizing business goals and user research, to facilitating cross-functional workshops and iterating on wireframes and prototypes in Figma. I collaborated closely with engineers to ensure feasibility, contributed to the design system, and presented progress and rationale to senior stakeholders, incorporating their feedback to refine the final solution.</p>
                         </div>
                     </div>
                 </section>
@@ -145,7 +241,8 @@
     <my-footer></my-footer>
 </footer>
     <script src="wc-footer.js"></script>
-    <script src="wc-nav-component.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="wc-nav-component.js"></script>
     <script src="wc-project-image-full.js"></script>
     <script src="wc-project-overview.js"></script>
     

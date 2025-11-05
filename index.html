@@ -18,12 +18,15 @@
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="src/typewriter.css">
+    <link rel="stylesheet" href="src/dark-theme.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:wght@100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
     <!-- Anti-flicker CSS for authentication -->
     <style id="auth-hide">html{visibility:hidden!important}</style>
+    <!-- Dark mode initialization -->
+    <script src="src/dark-mode-init.js"></script>
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
     <meta name="bingbot" content="noindex">
@@ -59,41 +62,43 @@
                 Featured Work
             </h2>
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Stacked project tiles matching Figma design -->
+            <div class="flex flex-col gap-[32px] items-start relative shrink-0 w-full">
                 <project-tile
                     image="Images/bankrate-data-center-hero.jpg"
                     year="2024"
                     title="Bankrate Data Center"
-                    description="Centralizing Bankrate's historical proprietary data into one Data Center"
-                    label="Product Design"
+                    description="Lorem ipsum dolor sit amet consectetur. Semper pharetra mauris ut adipiscing malesuada feugiat proin mattis arcu. Tincidunt vitae sit tempus libero."
+                    category="Product Design"
                     href="bankrate-data-center.html">
                 </project-tile>
+                
                 <project-tile
                     image="Images/Bankrate-review-template.jpg"
                     year="2025"
                     title="Bankrate Review Template"
                     description="A template for Bankrate's review pages"
-                    label="Product Design"
+                    category="Product Design"
                     href="bankrate-review-template.html">
                 </project-tile>
+                
                 <project-tile
                     image="Images/DS-Featured-Image.jpg"
                     year="2022"
                     title="Design System for an Enterprise Financial Services Company"
                     description="A case study in building and documenting a scalable design system for a global client."
-                    label="Design Systems"
+                    category="Product Design"
                     href="#">
                 </project-tile>
 
                 <project-tile
                     image="Images/Editorial-imagery/na-how-to-ask-someone-how-much-they-make copy.png"
                     year="2020-2025"
-                    title="Visual Design"
-                    description="Imagery for Bankrate and NextAdvisor"
-                    label="Visual Design"
+                    title="Editorial imagery"
+                    description="A case study in building and documenting a scalable design Imagery for Bankrate and NextAdvisor"
+                    category="Visual Design"
                     href="visual-design.html">
                 </project-tile>
-                <!-- Add more tiles as needed -->
             </div>
         </div>
     </section>
@@ -240,10 +245,10 @@
     <script src="src/typewriter.js"></script>
     <script src="script.js"></script>
     <script src="wc-footer.js"></script>
-    <script src="wc-nav-component.js"></script>
-    <script src="wc-project-tile.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="wc-nav-component.js"></script>
+  <script src="wc-project-tile.js"></script>
     <script src="wc-horizontal-scroll.js"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="wc-button.js"></script>
     
     <!-- Authentication check -->

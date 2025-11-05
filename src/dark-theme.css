@@ -1,0 +1,403 @@
+/* Dark Theme CSS based on Figma Design Colors */
+
+/* Main background and text colors */
+.dark {
+    color-scheme: dark;
+}
+
+.dark body {
+    background-color: #09090b !important; /* zinc-950 */
+    color: #ffffff !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Fix scrollbar issues in dark mode */
+.dark html {
+    scrollbar-gutter: stable;
+}
+
+/* Sections and containers */
+.dark section,
+.dark main,
+.dark .bg-white {
+    background-color: #09090b !important; /* zinc-950 */
+}
+
+/* Project showcase section backgrounds - zinc-900 */
+.dark .bg-stone-800,
+.dark .bg-zinc-900 {
+    background-color: #18181b !important; /* zinc-900 */
+}
+
+.dark .bg-gray-50,
+.dark .bg-gray-100 {
+    background-color: #18181b !important; /* zinc-900 */
+}
+
+/* Card and component backgrounds */
+.dark .bg-zinc-800,
+.dark .bg-gray-800 {
+    background-color: #27272a !important; /* zinc-800 */
+}
+
+/* Text colors */
+.dark .text-gray-900,
+.dark .text-stone-900,
+.dark .text-gray-800,
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #ffffff !important; /* white for headers */
+}
+
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-zinc-600 {
+    color: #9f9fa9 !important; /* zinc-400 for body text */
+}
+
+.dark .text-coral-100 {
+    color: #ffffff !important;
+}
+
+/* Borders */
+.dark .border-gray-900,
+.dark .border-gray-800,
+.dark .border-gray-300 {
+    border-color: #71717b !important; /* zinc-500 */
+}
+
+.dark .border-b {
+    border-color: #71717b !important; /* zinc-500 */
+}
+
+.dark hr {
+    border-color: #71717b !important; /* zinc-500 */
+}
+
+/* Buttons */
+.dark button {
+    color: #ffffff !important;
+}
+
+.dark .bg-coral-500,
+.dark .bg-coral-300 {
+    background-color: #00c6e5 !important; /* Primary accent color */
+    color: #000915 !important; /* Dark text on light button */
+}
+
+.dark .text-coral-500:hover,
+.dark .hover\\:text-coral-500:hover {
+    color: #00c6e5 !important;
+}
+
+.dark .border-coral-500:hover,
+.dark .hover\\:border-coral-500:hover {
+    border-color: #00c6e5 !important;
+}
+
+/* Project tiles and cards */
+.dark .shadow-lg,
+.dark .shadow-md,
+.dark .shadow-sm,
+.dark .shadow-xs {
+    box-shadow: 0 0 0 1px #71717b; /* zinc-500 border instead of shadow */
+}
+
+/* Forms and inputs */
+.dark input,
+.dark textarea,
+.dark select {
+    background-color: #27272a !important; /* zinc-800 */
+    border-color: #71717b !important; /* zinc-500 */
+    color: #ffffff !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: #9f9fa9 !important; /* zinc-400 */
+}
+
+/* Links */
+.dark a {
+    color: #ffffff !important;
+}
+
+.dark a:hover {
+    color: #00c6e5 !important;
+}
+
+/* Footer */
+.dark footer {
+    background-color: #09090b !important; /* zinc-950 */
+    border-color: #71717b !important; /* zinc-500 */
+}
+
+/* Specific component overrides */
+.dark .max-w-7xl,
+.dark .max-w-6xl,
+.dark .max-w-5xl,
+.dark .max-w-4xl {
+    /* Ensure containers inherit dark background */
+}
+
+/* Project image overlays and captions */
+.dark .bg-black\\/50 {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Typewriter text */
+.dark .typewriter {
+    color: #ffffff !important;
+}
+
+/* Navigation specific (additional to what's already in the component) */
+.dark nav {
+    background-color: #09090b !important;
+    border-color: #71717b !important;
+}
+
+/* Breadcrumbs */
+.dark my-breadcrumb {
+    background-color: #09090b !important;
+    color: #9f9fa9 !important;
+}
+
+/* Project overview sections */
+.dark .text-blue-600 {
+    color: #00c6e5 !important;
+}
+
+/* Ensure all backgrounds are properly dark */
+.dark * {
+    /* Reset any specific bg colors that might interfere */
+}
+
+.dark .bg-linear-to-b {
+    background: #09090b !important;
+}
+
+/* Project sections - should be zinc-900 background */
+.dark #project-section,
+.dark section:has(project-tile),
+.dark .project-section,
+.dark .bg-stone-50,
+.dark .bg-zinc-900 {
+    background-color: #18181b !important; /* zinc-900 */
+}
+
+/* Project tiles - horizontal layout from Figma */
+.dark project-tile .bg-zinc-800 {
+    background-color: #27272a !important; /* zinc-800 */
+}
+
+.dark project-tile .border-zinc-500 {
+    border-color: #71717b !important; /* zinc-500 */
+}
+
+.dark project-tile .text-zinc-400 {
+    color: #9f9fa9 !important; /* zinc-400 */
+}
+
+.dark project-tile .text-white {
+    color: #ffffff !important;
+}
+
+.dark project-tile .border-cyan-400 {
+    border-color: #00c6e5 !important;
+}
+
+.dark project-tile .group:hover .group-hover\\:bg-cyan-400 {
+    background-color: #00c6e5 !important;
+}
+
+.dark project-tile .group:hover .group-hover\\:text-black {
+    color: #000000 !important;
+}
+
+/* Project overview component */
+.dark .project-overview,
+.dark .bg-zinc-800,
+.dark .bg-gray-800 {
+    background-color: #27272a !important; /* zinc-800 */
+    border-color: #71717b !important; /* zinc-500 */
+}
+
+/* Gallery and image containers */
+.dark .grid > div {
+    background-color: #27272a !important; /* zinc-800 */
+    border-color: #71717b !important; /* zinc-500 */
+}
+
+/* List items */
+.dark ul li,
+.dark ol li {
+    color: #9f9fa9 !important; /* zinc-400 */
+}
+
+/* Strong and emphasis */
+.dark strong,
+.dark .font-bold {
+    color: #ffffff !important;
+}
+
+/* Code blocks and pre elements */
+.dark pre,
+.dark code {
+    background-color: #27272a !important; /* zinc-800 */
+    color: #ffffff !important;
+    border-color: #71717b !important; /* zinc-500 */
+}
+
+/* Tables */
+.dark table {
+    background-color: #27272a !important; /* zinc-800 */
+    color: #ffffff !important;
+}
+
+.dark th,
+.dark td {
+    border-color: #71717b !important; /* zinc-500 */
+    color: #ffffff !important;
+}
+
+/* Modal and overlay elements */
+.dark .modal,
+.dark .overlay {
+    background-color: rgba(9, 9, 11, 0.95) !important;
+}
+
+/* Line clamp utility for description text */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Login Page Specific Styles */
+.dark .bg-stone-50 {
+    background-color: #09090b !important; /* zinc-950 for main background */
+}
+
+/* Logo should be white in dark mode */
+.dark img[src="Images/gc-mark.svg"] {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Navigation logo - make dark gray parts white in dark mode */
+.dark navigation-menu svg path[fill="#333333"] {
+    fill: #ffffff !important;
+}
+
+/* General rule for any SVG path with dark gray (#333333) */
+.dark svg path[fill="#333333"] {
+    fill: #ffffff !important;
+}
+
+/* Mobile navigation logo */
+.dark img[src="Images/Mark-Coral-SVG.svg"] {
+    filter: brightness(0) invert(1) !important;
+}
+
+.dark .bg-white {
+    background-color: #27272a !important; /* zinc-800 for container */
+}
+
+.dark .border-gray-600 {
+    border-color: #71717b !important; /* zinc-500 */
+}
+
+.dark .text-gray-900 {
+    color: #ffffff !important; /* white for headings */
+}
+
+.dark .text-gray-600 {
+    color: #9f9fa9 !important; /* zinc-400 for secondary text */
+}
+
+.dark .text-gray-700 {
+    color: #9f9fa9 !important; /* zinc-400 for labels */
+}
+
+.dark input[type="email"],
+.dark input[type="password"] {
+    background-color: #18181b !important; /* zinc-900 for inputs */
+    color: #ffffff !important; /* white text */
+    border-color: #71717b !important; /* zinc-500 border */
+}
+
+.dark input[type="email"]:focus,
+.dark input[type="password"]:focus {
+    border-color: #00c6e5 !important; /* cyan-400 for focus */
+    background-color: #18181b !important; /* maintain zinc-900 on focus */
+}
+
+/* Maintain consistent background for filled inputs and autocomplete */
+.dark input[type="email"]:-webkit-autofill,
+.dark input[type="password"]:-webkit-autofill,
+.dark input[type="email"]:-webkit-autofill:focus,
+.dark input[type="password"]:-webkit-autofill:focus,
+.dark input[type="email"]:-webkit-autofill:hover,
+.dark input[type="password"]:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0 1000px #18181b inset !important; /* zinc-900 */
+    -webkit-text-fill-color: #ffffff !important; /* white text */
+    border-color: #71717b !important; /* zinc-500 border */
+}
+
+.dark input[type="email"]:valid,
+.dark input[type="password"]:valid {
+    background-color: #18181b !important; /* maintain zinc-900 when valid/filled */
+}
+
+.dark input::placeholder {
+    color: #71717b !important; /* zinc-500 for placeholder text */
+}
+
+/* Error message styles */
+.dark .bg-red-50 {
+    background-color: #7f1d1d !important; /* red-900 equivalent */
+}
+
+.dark .border-red-200 {
+    border-color: #dc2626 !important; /* red-600 */
+}
+
+.dark .text-red-800 {
+    color: #fca5a5 !important; /* red-300 for error text */
+}
+
+/* Loading message styles */
+.dark .bg-coral-50 {
+    background-color: #164e63 !important; /* cyan-900 equivalent */
+}
+
+.dark .border-coral-200 {
+    border-color: #00c6e5 !important; /* cyan-400 */
+}
+
+.dark .text-coral-800 {
+    color: #67e8f9 !important; /* cyan-300 for loading text */
+}
+
+/* Ensure smooth transitions for theme switching - target specific elements */
+body, 
+section, 
+nav, 
+div:not(.typewriter):not(.typewriter-word):not(.typewriter-container),
+button:not(.logout-btn):not(#darkModeToggle),
+a:not(.logout-btn),
+input,
+textarea,
+.bg-white,
+.bg-stone-50,
+.bg-zinc-800,
+.bg-zinc-900 {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Exclude text elements that might have animations from transitions */
+h1, h2, h3, h4, h5, h6, p, span {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    /* Exclude color transition for text elements to prevent flickering */
+}
+

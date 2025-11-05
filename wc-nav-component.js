@@ -6,6 +6,12 @@ class NavigationMenu extends HTMLElement {
     connectedCallback() {
         this.render();
         this.setupLogout();
+        this.setupDarkModeToggle();
+        
+        // Initialize Lucide icons after render
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     }
 
     setupLogout() {
@@ -45,6 +51,49 @@ class NavigationMenu extends HTMLElement {
         }, 100);
     }
 
+    setupDarkModeToggle() {
+        setTimeout(() => {
+            const darkModeBtn = this.querySelector('#darkModeToggle');
+            if (darkModeBtn) {
+                // Check for saved dark mode preference, default to dark mode
+                const darkModePreference = localStorage.getItem('darkMode');
+                const isDarkMode = darkModePreference !== 'false'; // Default to true unless explicitly set to false
+                this.applyTheme(isDarkMode);
+                
+                darkModeBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const currentMode = document.documentElement.classList.contains('dark');
+                    const newMode = !currentMode;
+                    this.applyTheme(newMode);
+                    localStorage.setItem('darkMode', newMode.toString());
+                });
+            }
+        }, 100);
+    }
+
+    applyTheme(isDarkMode) {
+        if (isDarkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        this.updateToggleIcon(isDarkMode);
+    }
+
+    updateToggleIcon(isDarkMode) {
+        const sunIcon = this.querySelector('#sunIcon');
+        const moonIcon = this.querySelector('#moonIcon');
+        if (sunIcon && moonIcon) {
+            if (isDarkMode) {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+        }
+    }
+
     render() {
         this.innerHTML = `
             <style>
@@ -53,6 +102,68 @@ class NavigationMenu extends HTMLElement {
                 @media (max-width: 380px) {
                   .logo-mobile { display: inline; }
                   .logo-desktop { display: none; }
+                }
+                
+                /* Dark mode styles based on Figma design */
+                .dark nav {
+                    background-color: #09090b !important;
+                    border-color: #71717b !important;
+                    color: #ffffff !important;
+                }
+                
+                .dark nav a {
+                    color: #ffffff !important;
+                }
+                
+                .dark nav a:hover {
+                    color: #00c6e5 !important;
+                }
+                
+                .dark .logout-btn {
+                    color: #ffffff !important;
+                    border-color: #71717b !important;
+                }
+                
+                .dark .logout-btn:hover {
+                    color: #00c6e5 !important;
+                    border-color: #00c6e5 !important;
+                }
+                
+                /* Logout button hover transitions */
+                .logout-btn {
+                    transition: color 0.15s ease, border-color 0.15s ease;
+                }
+
+                /* Dark mode toggle button styling */
+                #darkModeToggle {
+                    background: transparent;
+                    border: 1px solid #d1d5db;
+                    color: #374151;
+                    padding: 6px 8px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 32px;
+                    height: 32px;
+                }
+
+                #darkModeToggle:hover {
+                    color: #006c99; /* coral-500 to match other nav items */
+                    border-color: #006c99;
+                }
+
+                .dark #darkModeToggle {
+                    color: #ffffff !important;
+                    border-color: #71717b !important;
+                }
+
+                .dark #darkModeToggle:hover {
+                    color: #00c6e5 !important; /* coral-500 in dark mode */
+                    border-color: #00c6e5 !important;
                 }
             </style>
             <nav class="bg-white border-b border-1 border-gray-900 text-gray-900 flex justify-between items-center px-6 py-4 z-50 h-16 shadow-xs relative">
@@ -66,7 +177,13 @@ class NavigationMenu extends HTMLElement {
                     <li><a href="index.html#project-section" class="text-gray-900 no-underline hover:text-coral-500 transition-colors">Work</a></li>
                     <li><a href="about.html" class="text-gray-900 no-underline hover:text-coral-500 transition-colors">About</a></li>
                     <!-- <li><a href="PDF/Grant Crowder - Resume.pdf" class="text-gray-900 no-underline hover:text-coral-500 transition-colors">Resume</a></li> -->
-                    <li><button id="navLogoutBtn" class="logout-btn text-gray-900 no-underline hover:text-coral-500 transition-colors text-sm border border-gray-300 px-3 py-1 rounded-md hover:border-coral-500">Logout</button></li>
+                    <li>
+                        <button id="darkModeToggle" title="Toggle dark mode">
+                            <i id="moonIcon" data-lucide="moon" style="width: 20px; height: 20px;"></i>
+                            <i id="sunIcon" data-lucide="sun" style="width: 20px; height: 20px; display: none;"></i>
+                        </button>
+                    </li>
+                    <li><button id="navLogoutBtn" class="logout-btn text-gray-900 no-underline hover:text-coral-500 text-sm border border-gray-300 px-3 py-1 rounded-md hover:border-coral-500">Logout</button></li>
                 </ul>
                
                 </div>

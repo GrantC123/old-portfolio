@@ -4,6 +4,11 @@
 
 @import './typewriter.css';
 
+/* Prevent layout shifts from scrollbar appearance/disappearance */
+html {
+  scrollbar-gutter: stable;
+}
+
 /* Custom shadow with no blur */
 .shadow-no-blur {
   box-shadow: 0 4px 0 0 rgba(0,0,0,0.15);
