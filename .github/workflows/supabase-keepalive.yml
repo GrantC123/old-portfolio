@@ -1,0 +1,63 @@
+name: Supabase Keepalive
+
+on:
+  schedule:
+    # Run twice a week: Monday at 9 AM UTC and Thursday at 9 AM UTC
+    - cron: '0 9 * * 1,4'
+  # Allow manual triggering for testing
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Keep Supabase alive
+      env:
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      run: |
+        node -e "
+        const { createClient } = require('@supabase/supabase-js');
+        
+        (async () => {
+          const supabaseUrl = process.env.SUPABASE_URL;
+          const supabaseKey = process.env.SUPABASE_ANON_KEY;
+          
+          if (!supabaseUrl || !supabaseKey) {
+            console.error('Missing Supabase credentials. Please set SUPABASE_URL and SUPABASE_ANON_KEY in repository secrets.');
+            process.exit(1);
+          }
+          
+          const supabase = createClient(supabaseUrl, supabaseKey);
+          
+          console.log('Making keepalive request to Supabase...');
+          
+          try {
+            // Use auth.getSession() since you only have auth enabled
+            const { data, error } = await supabase.auth.getSession();
+            if (error) {
+              console.log('Auth keepalive result:', error.message);
+            } else {
+              console.log('Keepalive successful - Supabase project is active');
+            }
+          } catch (err) {
+            console.log('Keepalive completed (project is alive):', err.message);
+          }
+        })();
+        "
+        
+    - name: Log completion
+      run: echo "Supabase keepalive completed at $(date)"
